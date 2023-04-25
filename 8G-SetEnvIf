@@ -1,4 +1,4 @@
-# 8G FIREWALL v1.1 (beta) 20230415
+# 8G FIREWALL v1.2 (beta) 20230425
 # https://perishablepress.com/8g-firewall/
 # SetEnvIf version by Tonkünstler-on-the-Bund
 
@@ -10,8 +10,8 @@
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(order(\s|%20)by(\s|%20)1--)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(/|%2f)(\*|%2a)(\*|%2a)(/|%2f)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(`|<|>|\^|\|\\|0x00|%00|%0d%0a)#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(f?ckfinder|f?ckeditor|fullclick)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#((.*)header:|(.*)set-cookie:(.*)=)#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(ckeditor|ckfinder|fckeditor|fullclick)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(localhost|127(\.|%2e)0(\.|%2e)0(\.|%2e)1)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(cmd|command)(=|%3d)(chdir|mkdir)(.*)(x20)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(globals|mosconfig([a-z_]{1,22})|request)(=|\[)#i" bot
@@ -58,8 +58,8 @@
 	SetEnvIfNoCase Request_URI (/)(\*|\"|\'|\.|,|&|&amp;?)/?$ bot
 	SetEnvIfNoCase Request_URI (\.)(php)(\()?([0-9]+)(\))?(/)?$ bot
 	SetEnvIfNoCase Request_URI /((.*)header:|(.*)set-cookie:(.*)=) bot
-	SetEnvIfNoCase Request_URI (/)(ckfinder|fck|fckeditor|fullclick) bot
 	SetEnvIfNoCase Request_URI (\.(s?ftp-?)config|(s?ftp-?)config\.) bot
+	SetEnvIfNoCase Request_URI (/)(f?ckfinder|fck/|f?ckeditor|fullclick) bot
 	SetEnvIfNoCase Request_URI (/)((force-)?download|framework/main)(\.php) bot
 	SetEnvIfNoCase Request_URI (\{0\}|\"?0\"?=\"?0|\(/\(|\.\.\.|\+\+\+|\\\") bot
 	SetEnvIfNoCase Request_URI (/)(vbull(etin)?|boards|vbforum|vbweb|webvb)(/)? bot
@@ -67,7 +67,7 @@
 	SetEnvIfNoCase Request_URI (///|\?\?|/&&|/\*(.*)\*/|/:/|\\\\|0x00|%00|%0d%0a) bot
 	SetEnvIfNoCase Request_URI (/)(cgi_?)?alfa(_?cgiapi|_?data|_?v[0-9]+)?(\.php) bot
 	SetEnvIfNoCase Request_URI (thumbs?(_editor|open)?|tim(thumbs?)?)((\.|%2e)php) bot
-	SetEnvIfNoCase Request_URI (/)((boot)?_?admin(er|istrator|s)?(_events)?)(\.php) bot
+	SetEnvIfNoCase Request_URI (/)((boot)?_?admin(er|istrator|s)(_events)?)(\.php) bot
 	SetEnvIfNoCase Request_URI (/%7e)(root|ftp|bin|nobody|named|guest|logs|sshd)(/) bot
 	SetEnvIfNoCase Request_URI (archive|backup|db|master|sql|wp|www|wwwroot)\.(gz|zip) bot
 	SetEnvIfNoCase Request_URI (/)(\.?mad|alpha|c99|php|web)?sh(3|e)ll([0-9]+|\w)(\.php) bot
@@ -83,7 +83,7 @@
 	SetEnvIfNoCase Request_URI ^(/)(old-?site(back)?|old(web)?site(here)?|sites?|staging|undefined|wordpress([0-9]+)|wordpress-old)(/)?$ bot
 	SetEnvIfNoCase Request_URI (\(null\)|\{\$itemURL\}|cast\(0x|echo(.*)kae|etc/passwd|eval\(|null(.*)null|open_basedir|self/environ|\+union\+all\+select) bot
 	SetEnvIfNoCase Request_URI (/)(db-?|j-?|my(sql)?-?|setup-?|web-?|wp-?)?(admin-?)?(setup-?)?(conf\b|conf(ig)?)(uration)?(\.?bak|\.inc)?(\.inc|\.old|\.php|\.txt) bot
-	SetEnvIfNoCase Request_URI (/)((.*)crlf-?injection|(.*)xss-?protection|__(inc|jsc)|admin(istrator)?|author-panel|cgi-bin|database|downloader|(db|mysql)-?admin)(/) bot
+	SetEnvIfNoCase Request_URI (/)((.*)crlf-?injection|(.*)xss-?protection|__(inc|jsc)|administrator|author-panel|cgi-bin|database|downloader|(db|mysql)-?admin)(/) bot
 	SetEnvIfNoCase Request_URI (/)(filemanager|htdocs|httpdocs|https?|login|mailman|mailto|msoffice|_?php-?my-?admin(.*)|tmp|undefined|usage|var|vhosts|webmaster|www)(/) bot
 	SetEnvIfNoCase Request_URI (/)(awstats|document_root|dologin\.action|error.log|extension/ext|htaccess\.|lib/php|listinfo|phpunit/php|remoteview|server/php|www\.root\.) bot
 	SetEnvIfNoCase Request_URI (base64_(en|de)code|benchmark|curl_exec|e?chr|eval|function|fwrite|(f|p)open|html|leak|passthru|p?fsockopen|phpinfo)(.*)(\(|%28)(.*)(\)|%29) bot
@@ -136,7 +136,7 @@
 # 8G:[HTTP REFERRER]
 
 	SetEnvIfNoCase Referer (order(\s|%20)by(\s|%20)1--) bot
-	SetEnvIfNoCase Referer (@unlink|assert\(|print_r\(|xbshell) bot
+	SetEnvIfNoCase Referer (@unlink|assert\(|print_r\(|x00|xbshell) bot
 	SetEnvIfNoCase Referer (100dollars|best-seo|blue\spill|cocaine|ejaculat|erectile|erections|hoodia|huronriveracres|impotence|levitra|libido|lipitor|mopub\.com|phentermin) bot
 	SetEnvIfNoCase Referer (pornhelm|pro[sz]ac|sandyauer|semalt\.com|social-buttions|todaperfeita|tramadol|troyhamby|ultram|unicauca|valium|viagra|vicodin|xanax|ypxaieo) bot
 
