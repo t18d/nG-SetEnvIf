@@ -112,43 +112,43 @@
 
 # 8G:[USER AGENT]
 
-	SetEnvIfNoCase User-Agent ([a-z0-9]{2000,}) bot
-	SetEnvIfNoCase User-Agent (&lt;|%0a|%0d|%27|%3c|%3e|%00|0x00|\\\x22) bot
-	SetEnvIfNoCase User-Agent (oppo\sa33|(c99|php|web)shell|site((.){0,2})copier) bot
-	SetEnvIfNoCase User-Agent (base64_decode|bin/bash|disconnect|eval|unserializ) bot
-	SetEnvIfNoCase User-Agent (ahrefs|archiver|curl|libwww-perl|pycurl|scan|wget) bot
-	SetEnvIfNoCase User-Agent (acapbot|acoonbot|alexibot|asterias|attackbot|backdorbot|becomebot|binlar|blackwidow|blekkobot|blexbot|blowfish|bullseye|bunnys|butterfly|careerbot|casper) bot
-	SetEnvIfNoCase User-Agent (checkpriv|cheesebot|cherrypick|chinaclaw|choppy|clshttp|cmsworld|copernic|copyrightcheck|cosmos|crescent|cy_cho|datacha|demon|diavol|discobot|dittospyder) bot
-	SetEnvIfNoCase User-Agent (dotbot|dotnetdotcom|dumbot|econtext|emailcollector|emailsiphon|emailwolf|eolasbot|eventures|extract|eyenetie|feedfinder|flaming|flashget|flicky|foobot|fuck) bot
-	SetEnvIfNoCase User-Agent (g00g1e|getright|gigabot|go-ahead-got|gozilla|grabnet|grafula|harvest|heritrix|httracks?|icarus6j|jetbot|jetcar|jikespider|kmccrew|leechftp|libweb|liebaofast) bot
-	SetEnvIfNoCase User-Agent (linkscan|linkwalker|loader|lwp-download|majestic|masscan|miner|mechanize|mj12bot|morfeus|moveoverbot|netmechanic|netspider|nicerspro|nikto|ninja|nominet|nutch) bot
-	SetEnvIfNoCase User-Agent (octopus|pagegrabber|planetwork|postrank|proximic|purebot|queryn|queryseeker|radian6|radiation|realdownload|remoteview|rogerbot|scan|scooter|seekerspid) bot
-	SetEnvIfNoCase User-Agent (semalt|siclab|sindice|sistrix|sitebot|siteexplorer|sitesnagger|skygrid|smartdownload|snoopy|sosospider|spankbot|spbot|sqlmap|stackrambler|stripper|sucker|surftbot) bot
-	SetEnvIfNoCase User-Agent (sux0r|suzukacz|suzuran|takeout|teleport|telesoft|true_robots|turingos|turnit|vampire|vikspider|voideye|webleacher|webreaper|webstripper|webvac|webviewer|webwhacker) bot
-	SetEnvIfNoCase User-Agent (winhttp|wwwoffle|woxbot|xaldon|xxxyy|yamanalab|yioopbot|youda|zeus|zmeu|zune|zyborg) bot
+	SetEnvIfNoCase User-Agent [a-z0-9]{2000,} bot
+	SetEnvIfNoCase User-Agent &lt;|%0a|%0d|%27|%3c|%3e|%00|0x00|\\\x22 bot
+	SetEnvIfNoCase User-Agent oppo\sa33|(?:c99|php|web)shell|site.{0,2}copier bot
+	SetEnvIfNoCase User-Agent base64_decode|bin/bash|disconnect|eval|unserializ bot
+	SetEnvIfNoCase User-Agent ahrefs|archiver|curl|libwww-perl|pycurl|scan|wget bot
+	SetEnvIfNoCase User-Agent acapbot|acoonbot|alexibot|asterias|attackbot|backdorbot|becomebot|binlar|blackwidow|blekkobot|blexbot|blowfish|bullseye|bunnys|butterfly|careerbot|casper bot
+	SetEnvIfNoCase User-Agent checkpriv|cheesebot|cherrypick|chinaclaw|choppy|clshttp|cmsworld|copernic|copyrightcheck|cosmos|crescent|cy_cho|datacha|demon|diavol|discobot|dittospyder bot
+	SetEnvIfNoCase User-Agent dotbot|dotnetdotcom|dumbot|econtext|emailcollector|emailsiphon|emailwolf|eolasbot|eventures|extract|eyenetie|feedfinder|flaming|flashget|flicky|foobot|fuck bot
+	SetEnvIfNoCase User-Agent g00g1e|getright|gigabot|go-ahead-got|gozilla|grabnet|grafula|harvest|heritrix|httracks?|icarus6j|jetbot|jetcar|jikespider|kmccrew|leechftp|libweb|liebaofast bot
+	SetEnvIfNoCase User-Agent linkscan|linkwalker|loader|lwp-download|majestic|masscan|miner|mechanize|mj12bot|morfeus|moveoverbot|netmechanic|netspider|nicerspro|nikto|ninja|nominet|nutch bot
+	SetEnvIfNoCase User-Agent octopus|pagegrabber|planetwork|postrank|proximic|purebot|queryn|queryseeker|radian6|radiation|realdownload|remoteview|rogerbot|scan|scooter|seekerspid bot
+	SetEnvIfNoCase User-Agent semalt|siclab|sindice|sistrix|sitebot|siteexplorer|sitesnagger|skygrid|smartdownload|snoopy|sosospider|spankbot|spbot|sqlmap|stackrambler|stripper|sucker|surftbot bot
+	SetEnvIfNoCase User-Agent sux0r|suzukacz|suzuran|takeout|teleport|telesoft|true_robots|turingos|turnit|vampire|vikspider|voideye|webleacher|webreaper|webstripper|webvac|webviewer|webwhacker bot
+	SetEnvIfNoCase User-Agent winhttp|wwwoffle|woxbot|xaldon|xxxyy|yamanalab|yioopbot|youda|zeus|zmeu|zune|zyborg bot
 
 
 # 8G:[REMOTE HOST]
 
-	SetEnvIfNoCase Remote_Host (163data|amazonaws|colocrossing|crimea|g00g1e|justhost|kanagawa|loopia|masterhost|onlinehome|poneytel|sprintdatacenter|reverse.softlayer|safenet|ttnet|woodpecker|wowrack) bot
+	SetEnvIfNoCase Remote_Host 163data|amazonaws|colocrossing|crimea|g00g1e|justhost|kanagawa|loopia|masterhost|onlinehome|poneytel|sprintdatacenter|reverse.softlayer|safenet|ttnet|woodpecker|wowrack bot
 
 
 # 8G:[HTTP REFERRER]
 
-	SetEnvIfNoCase Referer (order(\s|%20)by(\s|%20)1--) bot
-	SetEnvIfNoCase Referer (@unlink|assert\(|print_r\(|x00|xbshell) bot
-	SetEnvIfNoCase Referer (100dollars|best-seo|blue\spill|cocaine|ejaculat|erectile|erections|hoodia|huronriveracres|impotence|levitra|libido|lipitor|mopub\.com|phentermin) bot
-	SetEnvIfNoCase Referer (pornhelm|pro[sz]ac|sandyauer|semalt\.com|social-buttions|todaperfeita|tramadol|troyhamby|ultram|unicauca|valium|viagra|vicodin|xanax|ypxaieo) bot
+	SetEnvIfNoCase Referer order(?:\s|%20)by(?:\s|%20)1-- bot
+	SetEnvIfNoCase Referer @unlink|assert\(|print_r\(|x00|xbshell bot
+	SetEnvIfNoCase Referer 100dollars|best-seo|blue\spill|cocaine|ejaculat|erectile|erections|hoodia|huronriveracres|impotence|levitra|libido|lipitor|mopub\.com|phentermin bot
+	SetEnvIfNoCase Referer pornhelm|pro[sz]ac|sandyauer|semalt\.com|social-buttions|todaperfeita|tramadol|troyhamby|ultram|unicauca|valium|viagra|vicodin|xanax|ypxaieo bot
 
 
 # 8G:[HTTP COOKIE]
 
-	SetEnvIfNoCase Cookie (<|>|\'|%0A|%0D|%27|%3C|%3E|%00) bot
+	SetEnvIfNoCase Cookie <|>|\'|%0A|%0D|%27|%3C|%3E|%00 bot
 
 
 # 8G:[REQUEST METHOD]
 
-	SetEnvIfNoCase Request_Method ^(connect|debug|move|trace|track) bot
+	SetEnvIfNoCase Request_Method ^(?:connect|debug|move|trace|track) bot
 
 
 # Extra:[HTTP HOST]
