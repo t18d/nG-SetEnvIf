@@ -68,16 +68,16 @@
 	SetEnvIfNoCase Request_URI /(?:cgi_?)?alfa(?:_?cgiapi|_?data|_?v[0-9]+)?\.php bot
 	SetEnvIfNoCase Request_URI (?:thumbs?(?:_editor|open)?|tim(?:thumbs?)?)(?:\.|%2e)php bot
 	SetEnvIfNoCase Request_URI /(?:boot)?_?admin(?:er|istrator|s)(?:_events)?\.php bot
-	SetEnvIfNoCase Request_URI (/%7e)(root|ftp|bin|nobody|named|guest|logs|sshd)(/) bot
-	SetEnvIfNoCase Request_URI (archive|backup|db|master|sql|wp|www|wwwroot)\.(gz|zip) bot
-	SetEnvIfNoCase Request_URI (/)(\.?mad|alpha|c99|php|web)?sh(3|e)ll([0-9]+|\w)(\.php) bot
-	SetEnvIfNoCase Request_URI (/)(admin-?|file-?)(upload)(bg|_?file|ify|svu|ye)?(\.php) bot
-	SetEnvIfNoCase Request_URI (/)(etc|var)(/)(hidden|secret|shadow|ninja|passwd|tmp)(/)?$ bot
-	SetEnvIfNoCase Request_URI (s)?(ftp|http|inurl|php)(s)?(:(/|%2f|%u2215)(/|%2f|%u2215)) bot
-	SetEnvIfNoCase Request_URI (/)(=|\$&?|&?(pws|rk)=0|_mm|_vti_|cgi(\.|-)?|(=|/|;|,)nt\.) bot
-	SetEnvIfNoCase Request_URI (\.)(ds_store|htaccess|htpasswd|init?|mysql-select-db)(/)?$ bot
-	SetEnvIfNoCase Request_URI (/)(bin)(/)(cc|chmod|chsh|cpp|echo|id|kill|mail|nasm|perl|ping|ps|python|tclsh)(/)?$ bot
-	SetEnvIfNoCase Request_URI (/)(::[0-9999]|%3a%3a[0-9999]|127\.0\.0\.1|ccx|localhost|makefile|pingserver|wwwroot)(/)? bot
+	SetEnvIfNoCase Request_URI /%7e(?:root|ftp|bin|nobody|named|guest|logs|sshd)/ bot
+	SetEnvIfNoCase Request_URI (?:archive|backup|db|master|sql|wp|www|wwwroot)\.(?:gz|zip) bot
+	SetEnvIfNoCase Request_URI /(?:\.?mad|alpha|c99|php|web)?sh(?:3|e)ll(?:[0-9]+|\w)\.php bot
+	SetEnvIfNoCase Request_URI /(?:admin-?|file-?)upload(?:bg|_?file|ify|svu|ye)?\.php bot
+	SetEnvIfNoCase Request_URI /(?:etc|var)/(?:hidden|secret|shadow|ninja|passwd|tmp)/?$ bot
+	SetEnvIfNoCase Request_URI s?(?:ftp|http|inurl|php)s?:(?:/|%2f|%u2215)(?:/|%2f|%u2215) bot
+	SetEnvIfNoCase Request_URI /(?:=|\$&?|&?(?:pws|rk)=0|_mm|_vti_|cgi(?:\.|-)?|(?:=|/|;|,)nt\.) bot
+	SetEnvIfNoCase Request_URI \.(?:ds_store|htaccess|htpasswd|init?|mysql-select-db)/?$ bot
+	SetEnvIfNoCase Request_URI /bin/(?:cc|chmod|chsh|cpp|echo|id|kill|mail|nasm|perl|ping|ps|python|tclsh)/?$ bot
+	SetEnvIfNoCase Request_URI /(?:::[0-9999]|%3a%3a[0-9999]|127\.0\.0\.1|ccx|localhost|makefile|pingserver|wwwroot)/? bot
 	SetEnvIfNoCase Request_URI (/)?j((\s)+)?a((\s)+)?v((\s)+)?a((\s)+)?s((\s)+)?c((\s)+)?r((\s)+)?i((\s)+)?p((\s)+)?t((\s)+)?(%3a|:) bot
 	SetEnvIfNoCase Request_URI ^(/)(123|backup|bak|beta|bkp|blog|default|demo|dev(new|old)?|home|new-?site|null|old|old_files|old1)(/)?$ bot
 	SetEnvIfNoCase Request_URI ^(/)(old-?site(back)?|old(web)?site(here)?|sites?|staging|undefined|wordpress([0-9]+)|wordpress-old)(/)?$ bot
