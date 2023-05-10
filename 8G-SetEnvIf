@@ -28,17 +28,17 @@
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:/|%2f)(?:=|%3d|$&|_mm|cgi(?:\.|-)|inurl(?::|%3a)(?:/|%2f)|(?:mod|path)(?:=|%3d)(?:\.|%2e))#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:<|%3c).*(?:e|%65|%45)(?:m|%6d|%4d)(?:b|%62|%42)(?:e|%65|%45)(?:d|%64|%44).*(?:>|%3e)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:<|%3c).*(?:i|%69|%49)(?:f|%66|%46)(?:r|%72|%52)(?:a|%61|%41)(?:m|%6d|%4d)(?:e|%65|%45).*(?:>|%3e)#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(<|%3c)(.*)(o|%4f|%6f)(b|%62|%42)(j|%4a|%6a)(e|%65|%45)(c|%63|%43)(t|%74|%54)(.*)(>|%3e)#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(<|%3c)(.*)(s|%73|%53)(c|%63|%43)(r|%72|%52)(i|%69|%49)(p|%70|%50)(t|%74|%54)(.*)(>|%3e)#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(\+|%2b|%20)(d|%64|%44)(e|%65|%45)(l|%6c|%4c)(e|%65|%45)(t|%74|%54)(e|%65|%45)(\+|%2b|%20)#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(\+|%2b|%20)(i|%69|%49)(n|%6e|%4e)(s|%73|%53)(e|%65|%45)(r|%72|%52)(t|%74|%54)(\+|%2b|%20)#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(\+|%2b|%20)(s|%73|%53)(e|%65|%45)(l|%6c|%4c)(e|%65|%45)(c|%63|%43)(t|%74|%54)(\+|%2b|%20)#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(\+|%2b|%20)(u|%75|%55)(p|%70|%50)(d|%64|%44)(a|%61|%41)(t|%74|%54)(e|%65|%45)(\+|%2b|%20)#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(\\x00|(\"|%22|\'|%27)?0(\"|%22|\'|%27)?(=|%3d)(\"|%22|\'|%27)?0|cast(\(|%28)0x|or%201(=|%3d)1)#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(g|%67|%47)(l|%6c|%4c)(o|%6f|%4f)(b|%62|%42)(a|%61|%41)(l|%6c|%4c)(s|%73|%53)(=|\[|%[0-9A-Z]{0,2})#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(_|%5f)(r|%72|%52)(e|%65|%45)(q|%71|%51)(u|%75|%55)(e|%65|%45)(s|%73|%53)(t|%74|%54)(=|\[|%[0-9A-Z]{2,})#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(j|%6a|%4a)(a|%61|%41)(v|%76|%56)(a|%61|%31)(s|%73|%53)(c|%63|%43)(r|%72|%52)(i|%69|%49)(p|%70|%50)(t|%74|%54)(:|%3a)(.*)(;|%3b|\)|%29)#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(b|%62|%42)(a|%61|%41)(s|%73|%53)(e|%65|%45)(6|%36)(4|%34)(_|%5f)(e|%65|%45|d|%64|%44)(e|%65|%45|n|%6e|%4e)(c|%63|%43)(o|%6f|%4f)(d|%64|%44)(e|%65|%45)(.*)(\()(.*)(\))#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:<|%3c).*(?:o|%4f|%6f)(?:b|%62|%42)(?:j|%4a|%6a)(?:e|%65|%45)(?:c|%63|%43)(?:t|%74|%54).*(?:>|%3e)#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:<|%3c).*(?:s|%73|%53)(?:c|%63|%43)(?:r|%72|%52)(?:i|%69|%49)(?:p|%70|%50)(?:t|%74|%54).*(?:>|%3e)#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:\+|%2b|%20)(?:d|%64|%44)(?:e|%65|%45)(?:l|%6c|%4c)(?:e|%65|%45)(?:t|%74|%54)(?:e|%65|%45)(?:\+|%2b|%20)#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:\+|%2b|%20)(?:i|%69|%49)(?:n|%6e|%4e)(?:s|%73|%53)(?:e|%65|%45)(?:r|%72|%52)(?:t|%74|%54)(?:\+|%2b|%20)#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:\+|%2b|%20)(?:s|%73|%53)(?:e|%65|%45)(?:l|%6c|%4c)(?:e|%65|%45)(?:c|%63|%43)(?:t|%74|%54)(?:\+|%2b|%20)#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:\+|%2b|%20)(?:u|%75|%55)(?:p|%70|%50)(?:d|%64|%44)(?:a|%61|%41)(?:t|%74|%54)(?:e|%65|%45)(?:\+|%2b|%20)#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#\\x00|(?:\"|%22|\'|%27)?0(?:\"|%22|\'|%27)?(?:=|%3d)(?:\"|%22|\'|%27)?0|cast(?:\(|%28)0x|or%201(?:=|%3d)1#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:g|%67|%47)(?:l|%6c|%4c)(?:o|%6f|%4f)(?:b|%62|%42)(?:a|%61|%41)(?:l|%6c|%4c)(?:s|%73|%53)(?:=|\[|%[0-9A-Z]{0,2})#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:_|%5f)(?:r|%72|%52)(?:e|%65|%45)(?:q|%71|%51)(?:u|%75|%55)(?:e|%65|%45)(?:s|%73|%53)(?:t|%74|%54)(?:=|\[|%[0-9A-Z]{2,})#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:j|%6a|%4a)(?:a|%61|%41)(?:v|%76|%56)(?:a|%61|%31)(?:s|%73|%53)(?:c|%63|%43)(?:r|%72|%52)(?:i|%69|%49)(?:p|%70|%50)(?:t|%74|%54)(?::|%3a).*(?:;|%3b|\)|%29)#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:b|%62|%42)(?:a|%61|%41)(?:s|%73|%53)(?:e|%65|%45)(?:6|%36)(?:4|%34)(?:_|%5f)(?:e|%65|%45|d|%64|%44)(?:e|%65|%45|n|%6e|%4e)(?:c|%63|%43)(?:o|%6f|%4f)(?:d|%64|%44)(?:e|%65|%45).*\(.*\)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(@copy|\$_(files|get|post)|allow_url_(fopen|include)|auto_prepend_file|blexbot|browsersploit|call_user_func_array|(c99|php|web)shell|curl(_exec|test)|disable_functions?|document_root)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(elastix|encodeuricom|exploit|fclose|fgets|file_put_contents|fputs|fsbuff|fsockopen|gethostbyname|ghost|grablogin|hmei7|hubs_post-cta|input_file|invokefunction|load_file|open_basedir|outfile|p3dlite)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(pass(=|%3d)shell|passthru|phpinfo|phpshells|popen|proc_open|quickbrute|remoteview|root_path|safe_mode|shell_exec|site((.){0,2})copier|sp_executesql|sux0r|trojan|udtudt|user_func_array|wget|wp_insert_user|xertive)#i" bot
