@@ -50,24 +50,24 @@
 
 # 8G:[REQUEST URI]
 
-	SetEnvIfNoCase Request_URI (,,,) bot
-	SetEnvIfNoCase Request_URI (-------) bot
-	SetEnvIfNoCase Request_URI (\^|`|<|>|\\|\|) bot
-	SetEnvIfNoCase Request_URI ([a-z0-9]{2000,}) bot
-	SetEnvIfNoCase Request_URI (=?\\\(\'|%27)/?)(\.) bot
-	SetEnvIfNoCase Request_URI (/)(\*|\"|\'|\.|,|&|&amp;?)/?$ bot
-	SetEnvIfNoCase Request_URI (\.)(php)(\()?([0-9]+)(\))?(/)?$ bot
-	SetEnvIfNoCase Request_URI /((.*)header:|(.*)set-cookie:(.*)=) bot
-	SetEnvIfNoCase Request_URI (\.(s?ftp-?)config|(s?ftp-?)config\.) bot
-	SetEnvIfNoCase Request_URI (/)(f?ckfinder|fck/|f?ckeditor|fullclick) bot
-	SetEnvIfNoCase Request_URI (/)((force-)?download|framework/main)(\.php) bot
-	SetEnvIfNoCase Request_URI (\{0\}|\"?0\"?=\"?0|\(/\(|\.\.\.|\+\+\+|\\\") bot
-	SetEnvIfNoCase Request_URI (/)(vbull(etin)?|boards|vbforum|vbweb|webvb)(/)? bot
-	SetEnvIfNoCase Request_URI (\.|20)(get|the)(_)(permalink|posts_page_url)(\() bot
-	SetEnvIfNoCase Request_URI (///|\?\?|/&&|/\*(.*)\*/|/:/|\\\\|0x00|%00|%0d%0a) bot
-	SetEnvIfNoCase Request_URI (/)(cgi_?)?alfa(_?cgiapi|_?data|_?v[0-9]+)?(\.php) bot
-	SetEnvIfNoCase Request_URI (thumbs?(_editor|open)?|tim(thumbs?)?)((\.|%2e)php) bot
-	SetEnvIfNoCase Request_URI (/)((boot)?_?admin(er|istrator|s)(_events)?)(\.php) bot
+	SetEnvIfNoCase Request_URI ,,, bot
+	SetEnvIfNoCase Request_URI ------- bot
+	SetEnvIfNoCase Request_URI \^|`|<|>|\\|\| bot
+	SetEnvIfNoCase Request_URI [a-z0-9]{2000,} bot
+	SetEnvIfNoCase Request_URI =?\\\(?:\'|%27)/?\. bot
+	SetEnvIfNoCase Request_URI /(?:\*|\"|\'|\.|,|&|&amp;?)/?$ bot
+	SetEnvIfNoCase Request_URI \.php(\()?[0-9]+\)?/?$ bot
+	SetEnvIfNoCase Request_URI /(?:.*header:|.*set-cookie:.*=) bot
+	SetEnvIfNoCase Request_URI \.s?ftp-?config|s?ftp-?config\. bot
+	SetEnvIfNoCase Request_URI /(?:f?ckfinder|fck/|f?ckeditor|fullclick) bot
+	SetEnvIfNoCase Request_URI /(?:(?:force-)?download|framework/main)\.php bot
+	SetEnvIfNoCase Request_URI \{0\}|\"?0\"?=\"?0|\(/\(|\.\.\.|\+\+\+|\\\" bot
+	SetEnvIfNoCase Request_URI /(?:vbull(?:etin)?|boards|vbforum|vbweb|webvb)/? bot
+	SetEnvIfNoCase Request_URI (?:\.|20)(?:get|the)_(?:permalink|posts_page_url)\( bot
+	SetEnvIfNoCase Request_URI (?:///|\?\?|/&&|/\*.*\*/|/:/|\\\\|0x00|%00|%0d%0a) bot
+	SetEnvIfNoCase Request_URI /(?:cgi_?)?alfa(?:_?cgiapi|_?data|_?v[0-9]+)?\.php bot
+	SetEnvIfNoCase Request_URI (?:thumbs?(?:_editor|open)?|tim(?:thumbs?)?)(?:\.|%2e)php bot
+	SetEnvIfNoCase Request_URI /(?:boot)?_?admin(?:er|istrator|s)(?:_events)?\.php bot
 	SetEnvIfNoCase Request_URI (/%7e)(root|ftp|bin|nobody|named|guest|logs|sshd)(/) bot
 	SetEnvIfNoCase Request_URI (archive|backup|db|master|sql|wp|www|wwwroot)\.(gz|zip) bot
 	SetEnvIfNoCase Request_URI (/)(\.?mad|alpha|c99|php|web)?sh(3|e)ll([0-9]+|\w)(\.php) bot
