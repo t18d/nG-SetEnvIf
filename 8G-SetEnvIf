@@ -18,16 +18,16 @@
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:/|%2f)(?:wp-)?config(?:(?:\.|%2e)inc)?(?:\.|%2e)php#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:thumbs?(?:_editor|open)?|tim(?:thumbs?)?)(?:\.|%2e)php#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:absolute_|base|root_)(?:dir|path)(?:=|%3d)(?:ftp|https?)#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(s)?(ftp|inurl|php)(s)?(:(/|%2f|%u2215)(/|%2f|%u2215))#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(\.|20)(get|the)(_|%5f)(permalink|posts_page_url)(\(|%28)#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#((boot|win)((\.|%2e)ini)|etc(/|%2f)passwd|self(/|%2f)environ)#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(((/|%2f){3,3})|((\.|%2e){3,3})|((\.|%2e){2,2})(/|%2f|%u2215))#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(benchmark|char|exec|fopen|function|html)(.*)(\(|%28)(.*)(\)|%29)#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(php)([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(e|%65|%45)(v|%76|%56)(a|%61|%31)(l|%6c|%4c)(.*)(\(|%28)(.*)(\)|%29)#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(/|%2f)(=|%3d|$&|_mm|cgi(\.|-)|inurl(:|%3a)(/|%2f)|(mod|path)(=|%3d)(\.|%2e))#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(<|%3c)(.*)(e|%65|%45)(m|%6d|%4d)(b|%62|%42)(e|%65|%45)(d|%64|%44)(.*)(>|%3e)#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(<|%3c)(.*)(i|%69|%49)(f|%66|%46)(r|%72|%52)(a|%61|%41)(m|%6d|%4d)(e|%65|%45)(.*)(>|%3e)#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:s)?(?:ftp|inurl|php)(?:s)?:(?:/|%2f|%u2215)(?:/|%2f|%u2215)#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:\.|20)(?:get|the)(?:_|%5f)(?:permalink|posts_page_url)(?:\(|%28)#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:boot|win)(?:\.|%2e)ini|etc(?:/|%2f)passwd|self(?:/|%2f)environ#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:/|%2f){3,3}|(?:\.|%2e){3,3}|(?:\.|%2e){2,2}(?:/|%2f|%u2215)#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:benchmark|char|exec|fopen|function|html).*(?:\(|%28).*(?:\)|%29)#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#php[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:e|%65|%45)(?:v|%76|%56)(?:a|%61|%31)(?:l|%6c|%4c).*(?:\(|%28).*(?:\)|%29)#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:/|%2f)(?:=|%3d|$&|_mm|cgi(?:\.|-)|inurl(?::|%3a)(?:/|%2f)|(?:mod|path)(?:=|%3d)(?:\.|%2e))#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:<|%3c).*(?:e|%65|%45)(?:m|%6d|%4d)(?:b|%62|%42)(?:e|%65|%45)(?:d|%64|%44).*(?:>|%3e)#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:<|%3c).*(?:i|%69|%49)(?:f|%66|%46)(?:r|%72|%52)(?:a|%61|%41)(?:m|%6d|%4d)(?:e|%65|%45).*(?:>|%3e)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(<|%3c)(.*)(o|%4f|%6f)(b|%62|%42)(j|%4a|%6a)(e|%65|%45)(c|%63|%43)(t|%74|%54)(.*)(>|%3e)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(<|%3c)(.*)(s|%73|%53)(c|%63|%43)(r|%72|%52)(i|%69|%49)(p|%70|%50)(t|%74|%54)(.*)(>|%3e)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(\+|%2b|%20)(d|%64|%44)(e|%65|%45)(l|%6c|%4c)(e|%65|%45)(t|%74|%54)(e|%65|%45)(\+|%2b|%20)#i" bot
