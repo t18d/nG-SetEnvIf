@@ -117,7 +117,7 @@
 	SetEnvIfNoCase User-Agent oppo\sa33|(?:c99|php|web)shell|site.{0,2}copier bot
 	SetEnvIfNoCase User-Agent base64_decode|bin/bash|disconnect|eval|unserializ bot
 	SetEnvIfNoCase User-Agent archiver|curl|libwww-perl|pycurl|scan|wget bot
-	SetEnvIfNoCase User-Agent acapbot|acoonbot|alexibot|asterias|attackbot|backdorbot|becomebot|binlar|blackwidow|blekkobot|blexbot|blowfish|bullseye|bunnys|butterfly|careerbot|casper bot
+	SetEnvIfNoCase User-Agent acapbot|acoonbot|alexibot|asterias|attackbot|backdorbot|becomebot|binlar|blackwidow|blekkobot|blowfish|bullseye|bunnys|butterfly|careerbot|casper bot
 	SetEnvIfNoCase User-Agent checkpriv|cheesebot|cherrypick|chinaclaw|choppy|clshttp|cmsworld|copernic|copyrightcheck|cosmos|crescent|cy_cho|datacha|demon|diavol|discobot|dittospyder bot
 	SetEnvIfNoCase User-Agent dotbot|dotnetdotcom|dumbot|econtext|emailcollector|emailsiphon|emailwolf|eolasbot|eventures|extract|eyenetie|feedfinder|flaming|flashget|flicky|foobot|fuck bot
 	SetEnvIfNoCase User-Agent g00g1e|getright|gigabot|go-ahead-got|gozilla|grabnet|grafula|harvest|heritrix|httracks?|icarus6j|jetbot|jetcar|jikespider|kmccrew|leechftp|libweb|liebaofast bot
