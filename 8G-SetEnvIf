@@ -61,10 +61,10 @@
 	SetEnvIfNoCase Request_URI \.s?ftp-?config|s?ftp-?config\. bot
 	SetEnvIfNoCase Request_URI /(?:f?ckfinder|fck/|f?ckeditor|fullclick) bot
 	SetEnvIfNoCase Request_URI /(?:(?:force-)?download|framework/main)\.php bot
-	SetEnvIfNoCase Request_URI \{0\}|\"?0\"?=\"?0|\(/\(|\.\.\.|\+\+\+|\\\" bot
+	SetEnvIfNoCase Request_URI \{0\}|\"?0\"?=\"?0|\(/\(|\.\.\.|\+\+\+|\\\\\" bot
 	SetEnvIfNoCase Request_URI /(?:vbull(?:etin)?|boards|vbforum|vbweb|webvb)/? bot
 	SetEnvIfNoCase Request_URI (?:\.|20)(?:get|the)_(?:permalink|posts_page_url)\( bot
-	SetEnvIfNoCase Request_URI (?:///|\?\?|/&&|/\*.*\*/|/:/|\\\\|0x00|%00|%0d%0a) bot
+	SetEnvIfNoCase Request_URI ///|\?\?|/&&|/\*.*\*/|/:/|\\\\\\\\|0x00|%00|%0d%0a bot
 	SetEnvIfNoCase Request_URI /(?:cgi_?)?alfa(?:_?cgiapi|_?data|_?v[0-9]+)?\.php bot
 	SetEnvIfNoCase Request_URI (?:thumbs?(?:_editor|open)?|tim(?:thumbs?)?)(?:\.|%2e)php bot
 	SetEnvIfNoCase Request_URI /(?:boot)?_?admin(?:er|istrator|s)(?:_events)?\.php bot
