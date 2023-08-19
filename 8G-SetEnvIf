@@ -9,7 +9,7 @@
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:/|%2f)(?::|%3a)(?:/|%2f)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#order(?:\s|%20)by(?:\s|%20)1--#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:/|%2f)(?:\*|%2a)(?:\*|%2a)(?:/|%2f)#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#`|<|>|\^|\|\\|0x00|%00|%0d%0a#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#`|<|>|\^|\|\\\\|0x00|%00|%0d%0a#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#f?ckfinder|f?ckeditor|fullclick#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#.*header:|.*set-cookie:.*=#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#localhost|127(?:\.|%2e)0(?:\.|%2e)0(?:\.|%2e)1#i" bot
@@ -34,7 +34,7 @@
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:\+|%2b|%20)(?:i|%69|%49)(?:n|%6e|%4e)(?:s|%73|%53)(?:e|%65|%45)(?:r|%72|%52)(?:t|%74|%54)(?:\+|%2b|%20)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:\+|%2b|%20)(?:s|%73|%53)(?:e|%65|%45)(?:l|%6c|%4c)(?:e|%65|%45)(?:c|%63|%43)(?:t|%74|%54)(?:\+|%2b|%20)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:\+|%2b|%20)(?:u|%75|%55)(?:p|%70|%50)(?:d|%64|%44)(?:a|%61|%41)(?:t|%74|%54)(?:e|%65|%45)(?:\+|%2b|%20)#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#\\x00|(?:\"|%22|\'|%27)?0(?:\"|%22|\'|%27)?(?:=|%3d)(?:\"|%22|\'|%27)?0|cast(?:\(|%28)0x|or%201(?:=|%3d)1#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#\\\\x00|(?:\"|%22|\'|%27)?0(?:\"|%22|\'|%27)?(?:=|%3d)(?:\"|%22|\'|%27)?0|cast(?:\(|%28)0x|or%201(?:=|%3d)1#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:g|%67|%47)(?:l|%6c|%4c)(?:o|%6f|%4f)(?:b|%62|%42)(?:a|%61|%41)(?:l|%6c|%4c)(?:s|%73|%53)(?:=|\[|%[0-9A-Z]{0,2})#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:_|%5f)(?:r|%72|%52)(?:e|%65|%45)(?:q|%71|%51)(?:u|%75|%55)(?:e|%65|%45)(?:s|%73|%53)(?:t|%74|%54)(?:=|\[|%[0-9A-Z]{2,})#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:j|%6a|%4a)(?:a|%61|%41)(?:v|%76|%56)(?:a|%61|%31)(?:s|%73|%53)(?:c|%63|%43)(?:r|%72|%52)(?:i|%69|%49)(?:p|%70|%50)(?:t|%74|%54)(?::|%3a).*(?:;|%3b|\)|%29)#i" bot
@@ -113,7 +113,7 @@
 # 8G:[USER AGENT]
 
 	SetEnvIfNoCase User-Agent [a-z0-9]{2000,} bot
-	SetEnvIfNoCase User-Agent &lt;|%0a|%0d|%27|%3c|%3e|%00|0x00|\\\x22 bot
+	SetEnvIfNoCase User-Agent &lt;|%0a|%0d|%27|%3c|%3e|%00|0x00|\\\\\x22 bot
 	SetEnvIfNoCase User-Agent oppo\sa33|(?:c99|php|web)shell|site.{0,2}copier bot
 	SetEnvIfNoCase User-Agent base64_decode|bin/bash|disconnect|eval|unserializ bot
 	SetEnvIfNoCase User-Agent ahrefs|archiver|curl|libwww-perl|pycurl|scan|wget bot
@@ -153,7 +153,7 @@
 
 # Extra:[HTTP HOST]
 
-	SetEnvIfNoCase Host "^\d|^$" bot
+	SetEnvIfNoCase Host ^\d|^$ bot
 
 
 # Controls who can get stuff from this server.
