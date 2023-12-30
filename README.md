@@ -1,5 +1,9 @@
 # nG-SetEnvIf
-An [nG Firewall](https://perishablepress.com/ng-firewall/) fork that replicates its functionality in httpd using mod_setenvif and tracks upstream release. The trade-off is between the efficiency [gained](https://httpd.apache.org/docs/2.4/rewrite/avoid.html) over mod_rewrite and having to [defer](https://www.webmasterworld.com/apache/4572958.htm) to any existing rewrite rules (eg for [permalink](https://glennmessersmith.com/pages/wphtaccess.html) settings).
+_A project of [Open Source by Tonkünstler-on-the-Bund](https://t18d.github.io/)_
+
+&nbsp;  
+&nbsp;  
+nG-SetEnvIf was created as an [nG Firewall](https://perishablepress.com/ng-firewall/) fork that replicates its functionality in httpd using mod_setenvif and tracks upstream release. The trade-off is between the efficiency [gained](https://httpd.apache.org/docs/2.4/rewrite/avoid.html) over mod_rewrite and having to [defer](https://www.webmasterworld.com/apache/4572958.htm) to any existing rewrite rules (eg for [permalink](https://glennmessersmith.com/pages/wphtaccess.html) settings).
 
 The focus being on performance, no logging facility is provided in addition to httpd's native logs. Backreference support has been removed to minimise memory footprint.
 
@@ -15,7 +19,7 @@ The focus being on performance, no logging facility is provided in addition to h
 **Upstream:** [8G v1.2](https://perishablepress.com/8g-firewall/), courtesy of Jeff Starr  
 **Idea for fork:** Port these rules to Cloudflare's free-tier WAF
 
-
+&nbsp;  
 <hr width="50%">
 
-**Our Sponsor:** &nbsp;<img src="https://github.com/t18d/nG-SetEnvIf/assets/130416721/a2922b2d-a2b0-4b59-a1e2-07c8b8294693" width="200" />
+**Our Sponsor:** &nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/t18d/nG-SetEnvIf/assets/130416721/574fa0d4-7f08-466d-a277-d3cd67e60ad1" width="200" />
