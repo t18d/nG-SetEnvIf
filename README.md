@@ -1,5 +1,5 @@
 # nG-SetEnvIf
-_A project of [Open Source by Tonkünstler-on-the-Bund](https://t18d.github.io/)_
+_a project of [Open Source by Tonkünstler-on-the-Bund](https://t18d.github.io/)_
 
 &nbsp;  
 &nbsp;  
