@@ -112,6 +112,7 @@
 
 # 8G:[USER AGENT]
 
+	SetEnvIfNoCase User-Agent ^[a-z0-9]$ bot
 	SetEnvIfNoCase User-Agent [a-z0-9]{2000,} bot
 	SetEnvIfNoCase User-Agent &lt;|%0a|%0d|%27|%3c|%3e|%00|0x00|\\\\\x22 bot
 	SetEnvIfNoCase User-Agent oppo\sa33|(?:c99|php|web)shell|site.{0,2}copier bot
