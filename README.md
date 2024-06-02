@@ -28,4 +28,5 @@ The focus being on performance, no logging facility is provided in addition to h
 
 **Our Sponsor:**
 
-<img src="https://github.com/t18d/nG-SetEnvIf/assets/130416721/574fa0d4-7f08-466d-a277-d3cd67e60ad1" width="200" />
+<img src="https://github.com/t18d/nG-SetEnvIf/assets/130416721/8d560367-f84b-478b-a9c9-ef1c1dc6331c" width="200" />
+
