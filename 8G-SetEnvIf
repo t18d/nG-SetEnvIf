@@ -41,7 +41,7 @@
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:b|%62|%42)(?:a|%61|%41)(?:s|%73|%53)(?:e|%65|%45)(?:6|%36)(?:4|%34)(?:_|%5f)(?:e|%65|%45|d|%64|%44)(?:e|%65|%45|n|%6e|%4e)(?:c|%63|%43)(?:o|%6f|%4f)(?:d|%64|%44)(?:e|%65|%45).*\(.*\)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#@copy|\$_(?:files|get|post)|allow_url_(?:fopen|include)|auto_prepend_file|blexbot|browsersploit|call_user_func_array|(?:c99|php|web)shell|curl(?:_exec|test)|disable_functions?|document_root#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#elastix|encodeuricom|exploit|fclose|fgets|file_put_contents|fputs|fsbuff|fsockopen|gethostbyname|ghost|grablogin|hmei7|hubs_post-cta|input_file|invokefunction|load_file|open_basedir|outfile|p3dlite#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#pass(?:=|%3d)shell|passthru|phpinfo|phpshells|popen|proc_open|quickbrute|remoteview|root_path|safe_mode|shell_exec|site.{0,2}copier|sp_executesql|sux0r|trojan|udtudt|user_func_array|wget|wp_insert_user|xertive#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#pass(?:=|%3d)shell|passthru|phpshells|popen|proc_open|quickbrute|remoteview|root_path|safe_mode|shell_exec|site.{0,2}copier|sp_executesql|sux0r|trojan|udtudt|user_func_array|wget|wp_insert_user|xertive#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:;|<|>|\'|\"|\)|%0a|%0d|%22|%27|%3c|%3e|%00).*(?:/\*|alter|base64|benchmark|cast|concat|convert|create|encode|declare|delay|delete|drop|hex|insert|load|md5|null|request|script|select|set|sleep|truncate|unhex|update)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:\+|%2b)(?:concat|delete|get|select|union)(?:\+|%2b)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#union.*select.*(?:\(|%28)#i" bot
