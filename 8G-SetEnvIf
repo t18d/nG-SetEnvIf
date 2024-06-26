@@ -40,8 +40,8 @@
     SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:_|%5f)(?:r|%72|%52)(?:e|%65|%45)(?:q|%71|%51)(?:u|%75|%55)(?:e|%65|%45)(?:s|%73|%53)(?:t|%74|%54)(?:=|\[|%[0-9A-Z]{2,})#i" bot
     SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:j|%6a|%4a)(?:a|%61|%41)(?:v|%76|%56)(?:a|%61|%31)(?:s|%73|%53)(?:c|%63|%43)(?:r|%72|%52)(?:i|%69|%49)(?:p|%70|%50)(?:t|%74|%54)(?::|%3a).*(?:;|%3b|\)|%29)#i" bot
     SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:b|%62|%42)(?:a|%61|%41)(?:s|%73|%53)(?:e|%65|%45)(?:6|%36)(?:4|%34)(?:_|%5f)(?:e|%65|%45|d|%64|%44)(?:e|%65|%45|n|%6e|%4e)(?:c|%63|%43)(?:o|%6f|%4f)(?:d|%64|%44)(?:e|%65|%45).*\(.*\)#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#@copy|\$_(?:files|get|post)|allow_url_(?:fopen|include)|auto_prepend_file|blexbot|browsersploit|call_user_func_array|(?:php|web)shell|curl(?:_exec|test)|disable_functions?|document_root#i" bot
- 	SetEnvIfExpr "%{QUERY_STRING} =~ m#elastix|encodeuricom|exploit|fclose|fgets|file_put_contents|fputs|fsbuff|fsockopen|gethostbyname|ghost|grablogin|hmei7|hubs_post-cta|input_file|invokefunction|\bload_file|open_basedir|outfile|p3dlite#i" bot
+    SetEnvIfExpr "%{QUERY_STRING} =~ m#@copy|\$_(?:files|get|post)|allow_url_(?:fopen|include)|auto_prepend_file|blexbot|browsersploit|call_user_func_array|(?:php|web)shell|curl(?:_exec|test)|disable_functions?|document_root#i" bot
+    SetEnvIfExpr "%{QUERY_STRING} =~ m#elastix|encodeuricom|exploit|fclose|fgets|file_put_contents|fputs|fsbuff|fsockopen|gethostbyname|ghost|grablogin|hmei7|hubs_post-cta|input_file|invokefunction|\bload_file|open_basedir|outfile|p3dlite#i" bot
     SetEnvIfExpr "%{QUERY_STRING} =~ m#pass(?:=|%3d)shell|passthru|phpshells|popen|proc_open|quickbrute|remoteview|root_path|safe_mode|shell_exec|site.{0,2}copier|sp_executesql|sux0r|trojan|udtudt|user_func_array|wget|wp_insert_user|xertive#i" bot
     SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:;|<|>|\'|\"|\)|%0a|%0d|%22|%27|%3c|%3e|%00).*(?:/\*|alter|base64|benchmark|cast|concat|convert|create|encode|declare|delay|delete|drop|hex|insert|load|md5|null|replace|request|script|select|set|sleep|truncate|unhex|update)#i" bot
     SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:\+|%2b)(?:concat|delete|get|select|union)(?:\+|%2b)#i" bot
@@ -102,12 +102,12 @@
     SetEnvIfNoCase Request_URI /(?:traffic-advice|u2p|udd|ukauka|up__uzegp|up14|upa?|upxx?|vega|vip|vu(?:ln)?\w?|webroot|weki|wikindex|wordpress|wp_logns?|wp_wrong_datlib)\.php bot
     SetEnvIfNoCase Request_URI /(?:(?:wp-?)?install(?:ation)?|wp(?:3|4|5|6)|wpfootes|wpzip|ws0|wsdl|wso\w?|www|(?:uploads|wp-admin)?xleet(?:-shell)?|xmlsrpc|xup|xxu|xxx|zibi|zipy)\.php bot
     SetEnvIfNoCase Request_URI bkv74|cachedsimilar|core-stab|crgrvnkb|ctivrc|deadcode|deathshop|dkiz|e7xue|eqxafaj90zir|exploits|ffmkpcal|filellli7|(?:fox|sid)wso|gel4y|goog1es|gvqqpinc bot
- 	SetEnvIfNoCase Request_URI @md5|00.temp00|0byte|0d4y|0day|0xor|wso1337|1h6j5|3xp|40dd1d|4price|70bex?|a57bze893|abbrevsprl|abruzi|adminer|aqbmkwwx|archivarix|backdoor|beez5|bgvzc29 bot
+    SetEnvIfNoCase Request_URI @md5|00.temp00|0byte|0d4y|0day|0xor|wso1337|1h6j5|3xp|40dd1d|4price|70bex?|a57bze893|abbrevsprl|abruzi|adminer|aqbmkwwx|archivarix|backdoor|beez5|bgvzc29 bot
     SetEnvIfNoCase Request_URI handler_to_code|hax(?:0|o)r|hmei7|hnap1|home_url=|ibqyiove|icxbsx|indoxploi|jahat|jijle3|kcrew|keywordspy|laobiao|lock360|longdog|marijuan|mod_(?:aratic|ariimag) bot
     SetEnvIfNoCase Request_URI mobiquo|muiebl|nessus|osbxamip|phpunit|priv8|qcmpecgy|r3vn330|racrew|raiz0|reportserver|r00t|respectmus|rom2823|roseleif|sh3ll|site.{0,2}copier|sqlpatch|sux0r bot
     SetEnvIfNoCase Request_URI sym403|telerik|uddatasql|utchiha|visualfrontend|w0rm|wangdafa|wpyii2|wsoyanzo|x5cv|xattack|xbaner|xertive|xiaolei|xltavrat|xorz|xsamxad|xsvip|xxxs?s?|zabbix|zebda bot
     SetEnvIfNoCase Request_URI \.(?:7z|ab4|ace|afm|alfa|as(?:h|m)x?|aspx?|aws|axd|bash|ba?k?|bat|bin|bz2|cfg|cfml?|cgi|cms|conf\b|config|ctl|dat|db|dist|dll|eml|eng(?:ine)?|env|et2|exe|fec|fla|git(?:ignore)?)$ bot
- 	SetEnvIfNoCase Request_URI \.(?:hg|idea|inc|index|ini|inv|jar|jspa?|lib|local|log|lqd|make|mbf|mdb|mmw|mny|mod(?:ule)?|msi|old|one|orig|out|passwd|pdb|php\.(?:php|suspect(?:ed)?)|php[^\/]|phtml?|pl|profiles?)$ bot
+    SetEnvIfNoCase Request_URI \.(?:hg|idea|inc|index|ini|inv|jar|jspa?|lib|local|log|lqd|make|mbf|mdb|mmw|mny|mod(?:ule)?|msi|old|one|orig|out|passwd|pdb|php\.(?:php|suspect(?:ed)?)|php[^\/]|phtml?|pl|profiles?)$ bot
     SetEnvIfNoCase Request_URI \.(?:psd|pst|ptdb|production|pwd|py|qbb|qdf|rar|rdf|remote|save|sdb|sql|sh|soa|svn|swf|swl|swo|swp|stx|tar|tax|tgz?|theme|tls|tmb|tmd|wok|wow|xsd|xtmpl|xz|ya?ml|za|zlib)$ bot
 
 
