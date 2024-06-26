@@ -4,7 +4,7 @@
 &nbsp;  
 &nbsp;  
 &nbsp;  
-nG-SetEnvIf was created as a fork of the [nG Firewall](https://perishablepress.com/ng-firewall/) that replicates its functionality in Apache httpd using mod_setenvif and tracks upstream release. The trade-off is between the [efficiency gained](https://httpd.apache.org/docs/2.4/rewrite/avoid.html) over mod_rewrite and [having to defer](https://www.webmasterworld.com/apache/4572958.htm) to any existing rewrite rules (_eg_ for [permalink settings](https://glennmessersmith.com/pages/wphtaccess.html)).
+nG-SetEnvIf was created as a fork of the [nG Firewall](https://perishablepress.com/ng-firewall/) that replicates its functionality in Apache httpd using `mod_setenvif` and tracks upstream release. The trade-off is between the [efficiency gained](https://httpd.apache.org/docs/2.4/rewrite/avoid.html) over `mod_rewrite` and [having to defer](https://www.webmasterworld.com/apache/4572958.htm) to any existing rewrite rules (_eg_ for [permalink settings](https://glennmessersmith.com/pages/wphtaccess.html)).
 
 The focus being on performance, no logging facility is provided in addition to httpd's native logs. Backreference support has been removed to minimise memory footprint.
 
@@ -16,11 +16,11 @@ The focus being on performance, no logging facility is provided in addition to h
 > [Test with mod_rewrite](https://perishablepress.com/ng-firewall-logging/) before deploying nG-SetEnvIf.
 
 &nbsp;  
-**Use case:** [httpd.conf](https://httpd.apache.org/docs/2.4/howto/htaccess.html#when)  
-**Requires:** mod_setenvif, mod_authz_core, mod_log_config   
-**Documentation:** [Using mod_rewrite to control access](https://httpd.apache.org/docs/2.4/rewrite/access.html)  
+**Use case:** [httpd.conf](https://httpd.apache.org/docs/trunk/howto/htaccess.html#when)  
+**Requires:** `mod_setenvif`, `mod_authz_core`, `mod_log_config`   
+**Documentation:** [Apache Module mod_setenvif](https://httpd.apache.org/docs/trunk/mod/mod_setenvif.html) and the discussion [here](https://httpd.apache.org/docs/trunk/rewrite/access.html#blocking-of-robots)  
 **Known issues & recipes:** See project [Wiki](https://github.com/t18d/nG-SetEnvIf/wiki/Known-Issues)  
-**Upstream:** [8G v1.2](https://perishablepress.com/8g-firewall/), courtesy of Jeff Starr  
+**Upstream:** [8G v1.3](https://perishablepress.com/8g-firewall/), courtesy of Jeff Starr  
 **Idea for fork:** Port these rules to Cloudflare's free-tier WAF
 
 &nbsp;  
