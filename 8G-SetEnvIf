@@ -121,7 +121,7 @@
     SetEnvIfNoCase User-Agent archiver|curl|libwww-perl|pycurl|scan bot
     SetEnvIfNoCase User-Agent acapbot|acoonbot|alexibot|asterias|attackbot|backdor|becomebot|binlar|blackwidow|blekkobot|blowfish|bullseye|bunnys|butterfly|careerbot|casper bot
     SetEnvIfNoCase User-Agent checkpriv|cheesebot|cherrypick|chinaclaw|choppy|clshttp|cmsworld|copernic|copyrightcheck|cosmos|crescent|datacha|\bdemon\b|diavol|discobot|dittospyder bot
-    SetEnvIfNoCase User-Agent dotbot|dotnetdotcom|dumbot|econtext|emailcollector|emailsiphon|emailwolf|eolasbot|eventures|extract|eyenetie|feedfinder|flaming|flashget|flicky|foobot|fuck bot
+    SetEnvIfNoCase User-Agent dotnetdotcom|dumbot|econtext|emailcollector|emailsiphon|emailwolf|eolasbot|eventures|extract|eyenetie|feedfinder|flaming|flashget|flicky|foobot|fuck bot
     SetEnvIfNoCase User-Agent g00g1e|getright|gigabot|go-ahead-got|gozilla|grabnet|grafula|harvest|heritrix|httracks?|icarus6j|jetbot|jetcar|jikespider|kmccrew|leechftp|libweb|liebaofast bot
     SetEnvIfNoCase User-Agent linkscan|linkwalker|loader|lwp-download|majestic|masscan|miner|mechanize|morfeus|moveoverbot|netmechanic|netspider|nicerspro|nikto|ninja|nominet|nutch bot
     SetEnvIfNoCase User-Agent octopus|pagegrabber|planetwork|postrank|proximic|purebot|queryn|queryseeker|radian6|radiation|realdownload|remoteview|rogerbot|scan|scooter|seekerspid bot
