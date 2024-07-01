@@ -4,7 +4,7 @@
 &nbsp;  
 &nbsp;  
 &nbsp;  
-nG-SetEnvIf was created as a fork of the [nG Firewall](https://perishablepress.com/ng-firewall/) that replicates its functionality in Apache httpd using `mod_setenvif` and tracks upstream release. The trade-off is between the [efficiency gained](https://httpd.apache.org/docs/2.4/rewrite/avoid.html) over `mod_rewrite` and [having to defer](https://www.webmasterworld.com/apache/4572958.htm) to any existing rewrite rules (_eg_ for [permalink settings](https://glennmessersmith.com/pages/wphtaccess.html)).
+nG-SetEnvIf was created as a fork of the [nG Firewall](https://perishablepress.com/ng-firewall/) that replicates its functionality in Apache httpd using `mod_setenvif` and tracks upstream release. The trade-off is between the [efficiency gained](https://httpd.apache.org/docs/2.4/rewrite/avoid.html) over `mod_rewrite` and [having to defer](https://www.webmasterworld.com/apache/4572958.htm) to any existing rewrite rules (_eg_ for [permalink settings](https://github.com/t18d/nG-SetEnvIf/wiki/Recipes#disable-mod_rewrite)).
 
 The focus being on performance, no logging facility is provided in addition to httpd's native logs. Backreference support has been removed to minimise memory footprint.
 
