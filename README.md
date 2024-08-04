@@ -18,8 +18,9 @@ The focus being on performance, no logging facility is provided in addition to h
 &nbsp;  
 **Use case:** [httpd.conf](https://httpd.apache.org/docs/trunk/howto/htaccess.html#when)  
 **Requires:** `mod_setenvif`, `mod_authz_core`, `mod_log_config`   
-**Documentation:** [Apache Module mod_setenvif](https://httpd.apache.org/docs/trunk/mod/mod_setenvif.html) and the discussion [here](https://httpd.apache.org/docs/trunk/rewrite/access.html#blocking-of-robots)  
-**Known issues & recipes:** See project [Wiki](https://github.com/t18d/nG-SetEnvIf/wiki/Known-Issues)  
+**Docs:** [Apache Module mod_setenvif](https://httpd.apache.org/docs/trunk/mod/mod_setenvif.html), and see the discussion [here](https://httpd.apache.org/docs/trunk/rewrite/access.html#blocking-of-robots)  
+**Recipes:** [block AI crawlers](https://github.com/t18d/nG-SetEnvIf/wiki/Recipes#ai-crawlers), [block spam emails](https://github.com/t18d/nG-SetEnvIf/wiki/Recipes#spam-emails), [disable `mod_rewrite`](https://github.com/t18d/nG-SetEnvIf/wiki/Recipes#disable-mod_rewrite-altogether) (WP), [rate-limiting](https://github.com/t18d/nG-SetEnvIf/wiki/Recipes#rate-limit-404s) (WP), [integration with Cloudflare](https://github.com/t18d/nG-SetEnvIf/wiki/Recipes#cloudflare)  
+**Known issues:** See project [Wiki](https://github.com/t18d/nG-SetEnvIf/wiki/Known-Issues)  
 **Upstream:** [8G v1.3](https://perishablepress.com/8g-firewall/), courtesy of Jeff Starr  
 **Idea for fork:** Port these rules to Cloudflare's free-tier WAF
 
