@@ -95,7 +95,7 @@
 	SetEnvIfNoCase Request_URI /(?:^$|-|\!|\w|\..*|100|123|[^iI]?ndex|index\.php/index|3xp|777|7yn|90sec|99|active|aill|ajs\.delivery|al277|alexuse?|ali|allwrite)\.php bot
 	SetEnvIfNoCase Request_URI /(?:analyser|apache|apikey|apismtp|authenticat(?:e|ing)|autoload_classmap|backup(?:_index)?|bakup|bkht|black|bogel|bookmark|bypass|cachee?)\.php bot
 	SetEnvIfNoCase Request_URI /(?:clean|cm(?:d|s)|con|connector\.minimal|contexmini|contral|curl(?:test)?|data(?:base)?|db|db-cache|db-safe-mode|defau11|defau1t|dompdf|dst)\.php bot
-	SetEnvIfNoCase Request_URI /(?:elements|emails?|error.log|ecscache|edit-form|eval-stdin|export|evil|fbrrchive|filemga|filenetworks?|f0x|gank(?:\.php)?|gass|gel|guide)\.php bot
+	SetEnvIfNoCase Request_URI /(?:elements|emails?|error.log|ecscache|edit-form|eval-stdin|evil|fbrrchive|filemga|filenetworks?|f0x|gank(?:\.php)?|gass|gel|guide)\.php bot
 	SetEnvIfNoCase Request_URI /(?:logo_img|lufix|mage|marg|mass|mide|moon|mssqli|mybak|myshe|mysql|mytag_js?|nasgor|newfile|news|nf_?tracking|nginx|ngoi|ohayo|old-?index)\.php bot
 	SetEnvIfNoCase Request_URI /(?:olux|owl|pekok|petx|php-?info|phpping|popup-pomo|priv|r3x|radio|rahma|randominit|readindex|readmy|reads|repair-?bak|robot(?:s\.txt)?|root)\.php bot
 	SetEnvIfNoCase Request_URI /(?:router|savepng|semayan|shell|shootme|sky|socket(?:c|i|iasrgasf)ontrol|sql(?:bak|_?dump)?|support|sym403|sys|system_log|test|tmp-?(?:uploads)?)\.php bot
