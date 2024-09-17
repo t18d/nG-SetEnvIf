@@ -43,6 +43,7 @@
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#elastix|encodeuricom|exploit|fclose|fgets|file_put_contents|fputs|fsbuff|fsockopen|gethostbyname|ghost|grablogin|hmei7|hubs_post-cta|input_file|invokefunction|\bload_file|open_basedir|outfile|p3dlite#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#pass(?:=|%3d)shell|passthru|phpshells|popen|proc_open|quickbrute|remoteview|root_path|safe_mode|shell_exec|site.{0,2}copier|sp_executesql|sux0r|trojan|udtudt|user_func_array|wget|wp_insert_user|xertive#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:\+|%2b)(?:concat|delete|get|select|union)(?:\+|%2b)#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#union.*select#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:concat|eval).*(?:\(|%28)#i" bot
 
 
