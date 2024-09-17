@@ -24,12 +24,12 @@
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:/|%2f){3,3}|(?:\.|%2e){3,3}|(?:\.|%2e){2,2}(?:/|%2f|%u2215)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:benchmark|char|exec|fopen|function|html).*(?:\(|%28)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#php[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#eval(?:\(|%28)#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#eval.*(?:\(|%28)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:/|%2f)(?:=|%3d|$&|_mm|cgi(?:\.|-)|inurl(?::|%3a)(?:/|%2f)|(?:mod|path)(?:=|%3d)(?:\.|%2e))#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:<|%3c)embed#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:<|%3c)iframe#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:<|%3c)object#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:<|%3c)script#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:<|%3c).*embed#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:<|%3c).*iframe#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:<|%3c).*object#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:<|%3c).*script#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:\+|%2b|%20)delete(?:\+|%2b|%20)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:\+|%2b|%20)insert(?:\+|%2b|%20)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:\+|%2b|%20)select(?:\+|%2b|%20)#i" bot
