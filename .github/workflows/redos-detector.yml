@@ -8,6 +8,8 @@ on:
   pull_request:
   push:
     branches: [ "staging" ]
+    paths:
+      - 'staging'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
