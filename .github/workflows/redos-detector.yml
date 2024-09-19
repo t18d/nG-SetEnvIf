@@ -32,5 +32,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           while read -r regex; do
-            redos-detector check "$regex" --caseInsensitive --resultsLimit 0
+            npx redos-detector check "$regex" --caseInsensitive --resultsLimit 0
           done < staging
