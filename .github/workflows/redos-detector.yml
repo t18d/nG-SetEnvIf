@@ -35,4 +35,4 @@ jobs:
       - name: Run redos-detector
         run: |
           cat staging | parallel -j+0 echo {} '&&' \
-          npx redos-detector check '"{}"' --caseInsensitive --resultsLimit 0
+          npx redos-detector check "{}" --caseInsensitive --resultsLimit 0
