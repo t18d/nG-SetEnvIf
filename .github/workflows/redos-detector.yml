@@ -34,4 +34,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run redos-detector
         run: |
-          cat staging | parallel -j+0 echo "$regex" && npx redos-detector check "$regex" --caseInsensitive --resultsLimit 0
+          cat staging | parallel -j+0 echo {} '&&' npx redos-detector check {} --caseInsensitive --resultsLimit 0
