@@ -31,7 +31,7 @@ eval.*(?:\(|%28)
 \\\\x00|(?:\"|%22|\'|%27)?0(?:\"|%22|\'|%27)?(?:=|%3d)(?:\"|%22|\'|%27)?0|cast(?:\(|%28)0x|or%201(?:=|%3d)1       
 globals(?:=|\[|%[0-9A-Z]{0,2})                  
 _request(?:=|\[|%[0-9A-Z]{2,})                                                                                                                
-javascript(?::|%3a).*(?:;|%3b|\)|%29)                                                                                                             
+javascript(?::|%3a).*(?:;|%3b|\)|%29)
 base64_(?:en|de)code.*\)                                                           
 @copy|\$_(?:files|get|post)|allow_url_(?:fopen|include)|auto_prepend_file|blexbot|browsersploit|call_user_func_array|(?:php|web)shell|curl(?:_exec|test)|disable_functions?|document_root       
 elastix|encodeuricom|exploit|fclose|fgets|file_put_contents|fputs|fsbuff|fsockopen|gethostbyname|ghost|grablogin|hmei7|hubs_post-cta|input_file|invokefunction|\bload_file|open_basedir|outfile|p3dlite       
