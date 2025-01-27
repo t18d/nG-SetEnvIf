@@ -1,4 +1,4 @@
-# 8G FIREWALL v1.3 20241209
+# 8G FIREWALL v1.4 20250127
 # https://perishablepress.com/8g-firewall/
 # SetEnvIf version by Tonkünstler-on-the-Bund
 
@@ -22,7 +22,7 @@
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:\.|20)(?:get|the)(?:_|%5f)(?:permalink|posts_page_url)(?:\(|%28)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:boot|win)(?:\.|%2e)ini|etc(?:/|%2f)passwd|self(?:/|%2f)environ#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:/|%2f){3,3}|(?:\.|%2e){3,3}|(?:\.|%2e){2,2}(?:/|%2f|%u2215)#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:benchmark|char|exec|fopen|function|html).*(?:\(|%28)#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:benchmark|exec|fopen|function|html).*(?:\(|%28)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#php[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#eval.*(?:\(|%28)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:/|%2f)(?:=|%3d|$&|_mm|cgi(?:\.|-)|inurl(?::|%3a)(?:/|%2f)|(?:mod|path)(?:=|%3d)(?:\.|%2e))#i" bot
@@ -72,17 +72,17 @@
 	SetEnvIfNoCase Request_URI /(?:admin-?|file-?)upload(?:bg|_?file|ify|svu|ye)?\.php bot
 	SetEnvIfNoCase Request_URI /(?:etc|var)/(?:hidden|secret|shadow|ninja|passwd|tmp)/?$ bot
 	SetEnvIfNoCase Request_URI s?(?:ftp|http|inurl|php)s?:(?:/|%2f|%u2215)(?:/|%2f|%u2215) bot
-	SetEnvIfNoCase Request_URI /(?:=|\$&?|&?(?:pws|rk)=0|_mm|_vti_|cgi(?:\.|-)?|(?:=|/|;|,)nt\.) bot
+	SetEnvIfNoCase Request_URI /(?:=|\$&?|&?(?:pws|rk)=0|_mm|_vti_|cgi(?:\.|-)|(?:=|/|;|,)nt\.) bot
 	SetEnvIfNoCase Request_URI \.(?:ds_store|htaccess|htpasswd|init?|mysql-select-db)/?$ bot
 	SetEnvIfNoCase Request_URI /bin/(?:cc|chmod|chsh|cpp|echo|id|kill|mail|nasm|perl|ping|ps|python|tclsh)/?$ bot
 	SetEnvIfNoCase Request_URI /(?:::[0-9999]|%3a%3a[0-9999]|127\.0\.0\.1|ccx|localhost|makefile|pingserver|wwwroot)/? bot
-	SetEnvIfNoCase Request_URI ^/(?:123|backup|bak|beta|bkp|default|demo|dev(?:new|old)?|home|new-?site|null|old|old_files|old1)/?$ bot
+	SetEnvIfNoCase Request_URI ^/(?:123|backup|bak|beta|bkp|default|demo|dev(?:new|old)?|new-?site|null|old|old_files|old1)/?$ bot
 	SetEnvIfNoCase Request_URI j\s*a\s*v\s*a\s*s\s*c\s*r\s*i\s*p\s*t\s*(?:%3a|:) bot
 	SetEnvIfNoCase Request_URI ^/(?:old-?site(?:back)?|old(?:web)?site(?:here)?|sites?|staging|undefined|wordpress[0-9]+|wordpress-old)/?$ bot
 	SetEnvIfNoCase Request_URI /(?:filemanager|htdocs|httpdocs|https?|mailman|mailto|msoffice|undefined|usage|var|vhosts|webmaster|www)/ bot
 	SetEnvIfNoCase Request_URI \(null\)|\{\$itemURL\}|cast\(0x|echo.*kae|etc/passwd|eval\(|null.*null|open_basedir|self/environ|\+union\+all\+select bot
 	SetEnvIfNoCase Request_URI (?:conf\b|conf(?:ig)?)(?:uration)?(?:\.?bak|\.inc|\.old|\.php|\.txt) bot
-	SetEnvIfNoCase Request_URI /(?:.*crlf-?injection|.*xss-?protection|__(?:inc|jsc)|administrator|author-panel|cgi-bin|database|downloader|(?:db|mysql)-?admin)/ bot
+	SetEnvIfNoCase Request_URI /(?:.*crlf-?injection|.*xss-?protection|__(?:inc|jsc)|author-panel|cgi-bin|database|downloader|(?:db|mysql)-?admin)/ bot
 	SetEnvIfNoCase Request_URI /(?:haders|head|hello|helpear|incahe|includes?|indo(?:sec)?|infos?|ioptimizes?|jmail|js|king|kiss|kodox|kro|legion|libsoft)\.php bot
 	SetEnvIfNoCase Request_URI /(?:awstats|document_root|dologin\.action|error.log|extension/ext|htaccess\.|lib/php|listinfo|phpunit/php|remoteview|server/php|www\.root\.) bot
 	SetEnvIfNoCase Request_URI (?:base64_(?:en|de)code|benchmark|curl_exec|e?chr|eval|function|fwrite|(?:f|p)open|html|leak|passthru|p?fsockopen|phpinfo).*(?:\)|%29) bot
@@ -115,11 +115,11 @@
 	SetEnvIfNoCase User-Agent ahrefs|archiver|curl|libwww-perl|pycurl|scan bot
 	SetEnvIfNoCase User-Agent oppo\sa33|(?:c99|php|web)shell|site.{0,2}copier bot
 	SetEnvIfNoCase User-Agent base64_decode|bin/bash|disconnect|eval|unserializ bot
-	SetEnvIfNoCase User-Agent acapbot|acoonbot|alexibot|asterias|attackbot|awario|backdor|becomebot|binlar|blackwidow|blekkobot|blex|blowfish|bullseye|bunnys|butterfly|careerbot|casper bot
-	SetEnvIfNoCase User-Agent checkpriv|cheesebot|cherrypick|chinaclaw|choppy|clshttp|cmsworld|copernic|copyrightcheck|cosmos|crescent|datacha|\bdemon\b|diavol|discobot|dittospyder bot
+	SetEnvIfNoCase User-Agent acapbot|acoonbot|alexibot|asterias|attackbot|awario|backdor|becomebot|binlar|blackwidow|blekkobot|blex|blowfish|bullseye|bunnys|butterfly|careerbot|casper|censysinspect bot
+	SetEnvIfNoCase User-Agent checkpriv|cheesebot|cherrypick|chinaclaw|choppy|claudebot|clshttp|cmsworld|copernic|copyrightcheck|cosmos|crawlergo|crescent|datacha|\bdemon\b|diavol|discobot|dittospyder bot
 	SetEnvIfNoCase User-Agent dotbot|dotnetdotcom|dumbot|econtext|emailcollector|emailsiphon|emailwolf|eolasbot|eventures|extract|eyenetie|feedfinder|flaming|flashget|flicky|foobot|fuck bot
-	SetEnvIfNoCase User-Agent g00g1e|getright|gigabot|go-ahead-got|gozilla|grabnet|grafula|harvest|heritrix|httracks?|icarus6j|jetbot|jetcar|jikespider|kmccrew|leechftp|libweb|liebaofast bot
-	SetEnvIfNoCase User-Agent linkscan|linkwalker|loader|lwp-download|majestic|masscan|miner|mechanize|mj12bot|morfeus|moveoverbot|netmechanic|netspider|nicerspro|nikto|ninja|nominet|nutch bot
+	SetEnvIfNoCase User-Agent g00g1e|getright|gigabot|go-ahead-got|gozilla|grabnet|grafula|harvest|heritrix|httracks?|icarus6j|imagesiftbot|jetbot|jetcar|jikespider|kmccrew|leechftp|libweb|liebaofast bot
+	SetEnvIfNoCase User-Agent linkscan|linkwalker|lwp-download|majestic|masscan|mauibot|miner|mechanize|mj12bot|morfeus|moveoverbot|mozlila|nbot|netmechanic|netspider|nicerspro|nikto|ninja|nominet|nutch bot
 	SetEnvIfNoCase User-Agent octopus|pagegrabber|planetwork|postrank|proximic|purebot|queryn|queryseeker|radian6|radiation|realdownload|remoteview|rogerbot|scan|scooter|seekerspid bot
 	SetEnvIfNoCase User-Agent semalt|siclab|sindice|sistrix|sitebot|siteexplorer|sitesnagger|skygrid|smartdownload|snoopy|sosospider|spankbot|spbot|sqlmap|stackrambler|stripper|sucker|surftbot bot
 	SetEnvIfNoCase User-Agent sux0r|suzukacz|suzuran|takeout|teleport|telesoft|true_robots|turingos|turnit|vampire|vikspider|voideye|webleacher|webreaper|webstripper|webvac|webviewer|webwhacker bot
