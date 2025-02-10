@@ -30,7 +30,7 @@
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#%3c.*iframe#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#%3c.*object#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#%3c.*script#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:+|%2b|%20)delete(?:\+|%2b|%20)#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:\+|%2b|%20)delete(?:\+|%2b|%20)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:\+|%2b|%20)insert(?:\+|%2b|%20)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:\+|%2b|%20)select(?:\+|%2b|%20)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:\+|%2b|%20)update(?:\+|%2b|%20)#i" bot
