@@ -1,7 +1,7 @@
 <div align="center">
 
 # nG-SetEnvIf
-![](https://img.shields.io/badge/nginx-1.27.3-009639?logo=nginx&logoColor=white)
+![](https://img.shields.io/badge/nginx-1.27.4-009639?logo=nginx&logoColor=white)
 ![](https://img.shields.io/badge/Apache-2.4.63-D22128?logo=Apache&logoColor=white)
 [![ReDoS detector](https://github.com/t18d/nG-SetEnvIf/actions/workflows/redos-detector.yml/badge.svg?branch=staging)](https://github.com/t18d/nG-SetEnvIf/actions/workflows/redos-detector.yml)
 &nbsp;  
