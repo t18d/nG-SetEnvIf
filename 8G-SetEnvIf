@@ -134,7 +134,7 @@
 # 8G:[HTTP REFERRER]
 
 	SetEnvIfNoCase Referer order(?:\s|%20)by(?:\s|%20)1-- bot
-	SetEnvIfNoCase Referer @unlink|assert\(|print_r\(|x00|xbshell bot
+	SetEnvIfNoCase Referer @unlink|assert\(|print_r\(|\x00|%00|xbshell bot
 	SetEnvIfNoCase Referer 100dollars|best-seo|blue\spill|cocaine|ejaculat|erectile|erections|hoodia|huronriveracres|impotence|levitra|libido|lipitor|mopub\.com|phentermin bot
 	SetEnvIfNoCase Referer pornhelm|pro[sz]ac|sandyauer|semalt\.com|social-buttions|todaperfeita|tramadol|troyhamby|ultram|unicauca|valium|viagra|vicodin|xanax|ypxaieo bot
 
