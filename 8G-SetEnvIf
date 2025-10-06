@@ -1,6 +1,9 @@
-# 8G FIREWALL v1.4 20250127
+# 8G FIREWALL v1.5 20251006
 # https://perishablepress.com/8g-firewall/
 # SetEnvIf version by Tonkünstler-on-the-Bund
+
+# Addon available: Block AI Bots
+# https://perishablepress.com/ultimate-ai-block-list/
 
 # 8G:[QUERY STRING]
 
@@ -40,7 +43,7 @@
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#javascript(?::|%3a).*(?:;|%3b|\)|%29)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#base64_(?:en|de)code.*\)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#@copy|\$_(?:files|get|post)|allow_url_(?:fopen|include)|auto_prepend_file|blexbot|browsersploit|call_user_func_array|(?:php|web)shell|curl(?:_exec|test)|disable_functions?|document_root#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#elastix|encodeuricom|exploit|fclose|fgets|file_put_contents|fputs|fsbuff|fsockopen|gethostbyname|ghost|grablogin|hmei7|hubs_post-cta|input_file|invokefunction|\bload_file|open_basedir|outfile|p3dlite#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#elastix|encodeuricom|exploit|fclose|fgets|file_put_contents|fputs|fsbuff|fsockopen|gethostbyname|grablogin|hmei7|hubs_post-cta|input_file|invokefunction|\bload_file|open_basedir|outfile|p3dlite#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#pass(?:=|%3d)shell|passthru|phpshells|popen|proc_open|quickbrute|remoteview|root_path|safe_mode|shell_exec|site.{0,2}copier|sp_executesql|sux0r|trojan|udtudt|user_func_array|wget|wp_insert_user|xertive#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:\+|%2b)(?:concat|delete|get|select|union)(?:\+|%2b)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#union.*select#i" bot
@@ -111,19 +114,19 @@
 # 8G:[USER AGENT]
 
 	SetEnvIfNoCase User-Agent ^[a-z0-9]$ bot
-	SetEnvIfNoCase User-Agent &lt;|%0a|%0d|%27|%3c|%3e|%00|0x00|\\\\\x22 bot
+	SetEnvIfNoCase User-Agent &lt;|%0a|%0d|%27|%3c|%3e|%00|0x00|\\\\\x22|\\\\\" bot
 	SetEnvIfNoCase User-Agent ahrefs|archiver|curl|libwww-perl|pycurl|scan bot
 	SetEnvIfNoCase User-Agent oppo\sa33|(?:c99|php|web)shell|site.{0,2}copier bot
 	SetEnvIfNoCase User-Agent base64_decode|bin/bash|disconnect|eval|unserializ bot
-	SetEnvIfNoCase User-Agent acapbot|acoonbot|alexibot|asterias|attackbot|awario|backdor|becomebot|binlar|blackwidow|blekkobot|blex|blowfish|bullseye|bunnys|butterfly|careerbot|casper|censysinspect bot
-	SetEnvIfNoCase User-Agent checkpriv|cheesebot|cherrypick|chinaclaw|choppy|claudebot|clshttp|cmsworld|copernic|copyrightcheck|cosmos|crawlergo|crescent|datacha|\bdemon\b|diavol|discobot|dittospyder bot
+	SetEnvIfNoCase User-Agent acapbot|acoonbot|alexibot|antbot|asterias|attackbot|awario|babbar|backdor|barkrowler|becomebot|binlar|bitsightbot|blackwidow|blekkobot|blex|blowfish|bullseye|bunnys|butterfly|bytespider|careerbot|casper|censysinspect bot
+	SetEnvIfNoCase User-Agent checkpriv|cheesebot|cherrypick|chinaclaw|choppy|claudebot|clshttp|cmsworld|commoncrawl|copernic|copyrightcheck|cosmos|crawlergo|crescent|criteo|datacha|dataforseo|\bdemon\b|diavol|discobot|dittospyder bot
 	SetEnvIfNoCase User-Agent dotbot|dotnetdotcom|dumbot|econtext|emailcollector|emailsiphon|emailwolf|eolasbot|eventures|extract|eyenetie|feedfinder|flaming|flashget|flicky|foobot|fuck bot
-	SetEnvIfNoCase User-Agent g00g1e|getright|gigabot|go-ahead-got|gozilla|grabnet|grafula|harvest|heritrix|httracks?|icarus6j|imagesiftbot|jetbot|jetcar|jikespider|kmccrew|leechftp|libweb|liebaofast bot
-	SetEnvIfNoCase User-Agent linkscan|linkwalker|lwp-download|majestic|masscan|mauibot|miner|mechanize|mj12bot|morfeus|moveoverbot|mozlila|nbot|netmechanic|netspider|nicerspro|nikto|ninja|nominet|nutch bot
-	SetEnvIfNoCase User-Agent octopus|pagegrabber|planetwork|postrank|proximic|purebot|queryn|queryseeker|radian6|radiation|realdownload|remoteview|rogerbot|scan|scooter|seekerspid bot
-	SetEnvIfNoCase User-Agent semalt|siclab|sindice|sistrix|sitebot|siteexplorer|sitesnagger|skygrid|smartdownload|snoopy|sosospider|spankbot|spbot|sqlmap|stackrambler|stripper|sucker|surftbot bot
-	SetEnvIfNoCase User-Agent sux0r|suzukacz|suzuran|takeout|teleport|telesoft|true_robots|turingos|turnit|vampire|vikspider|voideye|webleacher|webreaper|webstripper|webvac|webviewer|webwhacker bot
-	SetEnvIfNoCase User-Agent winhttp|wwwoffle|woxbot|xaldon|xxxyy|yamanalab|yioopbot|youda|zeus|zmeu|zune|zyborg bot
+	SetEnvIfNoCase User-Agent g00g1e|getright|gigabot|go-ahead-got|go-http-client|gozilla|grabnet|grafula|harvest|heritrix|hrankbot|httracks?|icarus6j|imagesiftbot|intelx|jetbot|jetcar|jikespider|kmccrew|leechftp|libweb|liebaofast bot
+	SetEnvIfNoCase User-Agent linkscan|linkwalker|lwp-download|majestic|masscan|mauibot|miner|mechanize|mj12bot|morfeus|moveoverbot|mozlila|netmechanic|netspider|nicerspro|nikto|ninja|nominet|nutch bot
+	SetEnvIfNoCase User-Agent octopus|pagegrabber|petalbot|planetwork|postrank|proximic|purebot|queryn|queryseeker|radian6|radiation|realdownload|remoteview|rogerbot|scan|scooter|scrapy|seekerspid bot
+	SetEnvIfNoCase User-Agent semalt|seokicks|seznambot|siclab|sindice|sistrix|sitebot|siteexplorer|sitesnagger|skygrid|smartdownload|snoopy|sosospider|spankbot|spbot|sqlmap|stackrambler|stripper|sucker|surftbot bot
+	SetEnvIfNoCase User-Agent sux0r|suzukacz|suzuran|takeout|teleport|telesoft|true_robots|turingos|turnit|tweetmemebot|vampire|vikspider|voideye|webleacher|webreaper|webstripper|webvac|webviewer|webwhacker|wellknownbot bot
+	SetEnvIfNoCase User-Agent winhttp|wwwoffle|woxbot|xaldon|xxxyy|yamanalab|yioopbot|yisouspider|youda|zeus|zmeu|zoominfobot|zune|zyborg bot
 
 
 # 8G:[REMOTE HOST]
@@ -141,17 +144,12 @@
 
 # 8G:[HTTP COOKIE]
 
-	SetEnvIfNoCase Cookie <|>|\'|%0A|%0D|%27|%3C|%3E|%00 bot
+	SetEnvIfNoCase Cookie <|>|\'|%0A|%0D|%27|%00 bot
 
 
 # 8G:[REQUEST METHOD]
 
 	SetEnvIfNoCase Request_Method ^(?:connect|debug|move|trace|track) bot
-
-
-# Extra:[HTTP HOST]
-
-	SetEnvIfNoCase Host ^\d|^$ bot
 
 
 # Controls who can get stuff from this server.
