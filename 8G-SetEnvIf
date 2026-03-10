@@ -87,7 +87,7 @@
 	SetEnvIfNoCase Request_URI (?:conf\b|conf(?:ig)?)(?:uration)?(?:\.?bak|\.inc|\.old|\.php|\.txt) bot
 	SetEnvIfNoCase Request_URI /(?:.*crlf-?injection|.*xss-?protection|__(?:inc|jsc)|author-panel|cgi-bin|database|downloader|(?:db|mysql)-?admin)/ bot
 	SetEnvIfNoCase Request_URI /(?:haders|head|hello|helpear|incahe|includes?|indo(?:sec)?|infos?|ioptimizes?|jmail|js|king|kiss|kodox|kro|legion|libsoft)\.php bot
-	SetEnvIfNoCase Request_URI /(?:awstats|document_root|dologin\.action|error.log|extension/ext|htaccess\.|lib/php|listinfo|phpunit/php|remoteview|server/php|www\.root\.) bot
+	SetEnvIfNoCase Request_URI /(?:awstats|document_root|dologin\.action|error\.log|extension/ext|htaccess\.|lib/php|listinfo|phpunit/php|remoteview|server/php|www\.root\.) bot
 	SetEnvIfNoCase Request_URI (?:base64_(?:en|de)code|benchmark|curl_exec|echr|eval|function|fwrite|(?:f|p)open|html|leak|passthru|p?fsockopen|phpinfo).*(?:\)|%29) bot
 	SetEnvIfNoCase Request_URI (?:posix_(?:kill|mkfifo|setpgid|setsid|setuid)|(?:child|proc)_(?:close|get_status|nice|open|terminate)|(?:shell_)?exec|system).*(?:\)|%29) bot
 	SetEnvIfNoCase Request_URI /(?:(?:c99|php|web)?shell|crossdomain|fileditor|locus7|nstview|php(?:get|remoteview|writer)|r57|remview|sshphp|storm7|webadmin).*(?:\.|%2e|\(|%28) bot
@@ -95,7 +95,7 @@
 	SetEnvIfNoCase Request_URI /(?:^$|-|\!|\w|\..*|100|123|[^iI]?ndex|index\.php/index|3xp|777|7yn|90sec|99|active|aill|ajs\.delivery|al277|alexuse?|ali|allwrite)\.php bot
 	SetEnvIfNoCase Request_URI /(?:analyser|apache|apikey|apismtp|authenticat(?:e|ing)|autoload_classmap|backup(?:_index)?|bakup|bkht|black|bogel|bookmark|bypass|cachee?)\.php bot
 	SetEnvIfNoCase Request_URI /(?:clean|cm(?:d|s)|con|connector\.minimal|contexmini|contral|curl(?:test)?|data(?:base)?|db|db-cache|db-safe-mode|defau11|defau1t|dompdf|dst)\.php bot
-	SetEnvIfNoCase Request_URI /(?:elements|emails?|error.log|ecscache|edit-form|eval-stdin|evil|fbrrchive|filemga|filenetworks?|f0x|gank(?:\.php)?|gass|gel|guide)\.php bot
+	SetEnvIfNoCase Request_URI /(?:elements|emails?|error\.log|ecscache|edit-form|eval-stdin|evil|fbrrchive|filemga|filenetworks?|f0x|gank(?:\.php)?|gass|gel|guide)\.php bot
 	SetEnvIfNoCase Request_URI /(?:logo_img|lufix|mage|marg|mass|mide|moon|mssqli|mybak|myshe|mysql|mytag_js?|nasgor|newfile|news|nf_?tracking|nginx|ngoi|ohayo|old-?index)\.php bot
 	SetEnvIfNoCase Request_URI /(?:olux|owl|pekok|petx|php-?info|phpping|popup-pomo|priv|r3x|radio|rahma|randominit|readindex|readmy|reads|repair-?bak|robot(?:s\.txt)?|root)\.php bot
 	SetEnvIfNoCase Request_URI /(?:router|savepng|semayan|shell|shootme|sky|socket(?:c|i|iasrgasf)ontrol|sql(?:bak|_?dump)?|support|sym403|sys|system_log|test|tmp-?(?:uploads)?)\.php bot
