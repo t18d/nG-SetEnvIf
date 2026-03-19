@@ -70,11 +70,14 @@ For best performance, `httpd.conf` [should be used](https://httpd.apache.org/doc
 If even nG-SetEnvIf fails to satisfy your passion for performance, read on.
 
 - [Maxim Dounin’s Q&A](https://github.com/t18d/nG-SetEnvIf/wiki/Maxim-Dounin’s-Q&A) (nginx)
+- [Replace mod_rewrite](https://github.com/t18d/nG-SetEnvIf/wiki/Recipes#disable-mod_rewrite-altogether) (Apache)
+- [Calculate `pm.max_children`](https://devcenter.heroku.com/articles/php-concurrency#web_concurrency-defaults-by-dyno-type) (PHP)
+- [OPcache tuning](https://tideways.com/profiler/blog/fine-tune-your-opcache-configuration-to-avoid-caching-suprises) (PHP)
+- [Percona's environment for MySQL](https://www.percona.com/blog/innodb-performance-optimization-basics-updated/#:~:text=Operating%20system)
 - [Post-quantum KEM](https://github.com/t18d/nG-SetEnvIf/wiki/Recipes#post-quantum-kem)
 - [URL normalisation](https://github.com/t18d/nG-SetEnvIf/wiki/Recipes#url-normalisation)
 - [Block AI crawlers](https://github.com/t18d/nG-SetEnvIf/wiki/Recipes#ai-crawlers)
 - [Block spam emails](https://github.com/t18d/nG-SetEnvIf/wiki/Recipes#spam-emails)
-- [Replace mod_rewrite](https://github.com/t18d/nG-SetEnvIf/wiki/Recipes#disable-mod_rewrite-altogether) (Apache)
 - [Rate-limiting](https://github.com/t18d/nG-SetEnvIf/wiki/Recipes#rate-limit-404s) (WP)
 - [Integration with Cloudflare](https://github.com/t18d/nG-SetEnvIf/wiki/Recipes#cloudflare)
 
