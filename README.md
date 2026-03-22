@@ -79,6 +79,7 @@ If even nG-SetEnvIf fails to satisfy your passion for performance, read on.
 - [Block AI crawlers](https://github.com/t18d/nG-SetEnvIf/wiki/Recipes#ai-crawlers)
 - [Block spam emails](https://github.com/t18d/nG-SetEnvIf/wiki/Recipes#spam-emails)
 - [Rate-limiting](https://github.com/t18d/nG-SetEnvIf/wiki/Recipes#rate-limit-404s) (WP)
+- [Option autoloading](https://joost.blog/cleaning-up-wordpress-option-clutter/) (WP)
 - [Integration with Cloudflare](https://github.com/t18d/nG-SetEnvIf/wiki/Recipes#cloudflare)
 
 &nbsp;  
