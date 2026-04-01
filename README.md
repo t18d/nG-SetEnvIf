@@ -75,6 +75,8 @@ If even nG-SetEnvIf fails to satisfy your passion for performance, read on.
 - [OPcache tuning](https://tideways.com/profiler/blog/fine-tune-your-opcache-configuration-to-avoid-caching-suprises) (PHP)
 - [Percona's environment for MySQL](https://www.percona.com/blog/innodb-performance-optimization-basics-updated/#:~:text=Operating%20system)
 - Battle of the Mallocators: [tcmalloc](http://dimitrik.free.fr/blog/posts/mysql-perf-fosdem25.html) | [jemalloc](https://smalldatum.blogspot.com/2025/04/battle-of-mallocators.html)
+- [In defence of swap](https://chrisdown.name/2018/01/02/in-defence-of-swap.html)
+- [Debunking zram myths](https://chrisdown.name/2026/03/24/zswap-vs-zram-when-to-use-what.html)
 - [Profile-Guided Optimisation](https://github.com/t18d/nG-SetEnvIf/wiki/Recipes#pgo) (PHP, MySQL)
 - [Post-quantum KEM](https://github.com/t18d/nG-SetEnvIf/wiki/Recipes#post-quantum-kem)
 - [URL normalisation](https://github.com/t18d/nG-SetEnvIf/wiki/Recipes#url-normalisation)
