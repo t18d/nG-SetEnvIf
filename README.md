@@ -1,7 +1,7 @@
 <div align="center">
 
 # nG-SetEnvIf
-[![](https://custom-icon-badges.demolab.com/badge/freenginx-1.29.6-009639?logo=freenginx&logoColor=white)](https://freenginx.org/en/)
+[![](https://custom-icon-badges.demolab.com/badge/freenginx-1.31.0-009639?logo=freenginx&logoColor=white)](https://freenginx.org/en/)
 ![](https://img.shields.io/badge/Apache-2.4.67-D22128?logo=Apache&logoColor=white)
 [![ReDoS detector](https://github.com/t18d/nG-SetEnvIf/actions/workflows/redos-detector.yml/badge.svg?branch=staging)](https://github.com/t18d/nG-SetEnvIf/actions/workflows/redos-detector.yml)
 &nbsp;  
