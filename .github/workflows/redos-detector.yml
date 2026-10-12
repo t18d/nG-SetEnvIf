@@ -52,8 +52,11 @@ jobs:
             line="$1"
             regex=$(printf '%s\n' "$line" | sed 's/.*~\*//; s/" [0-9][0-9]*;$//')
             printf -v q '%q' "$regex"
-            eval "rxray $q >/dev/null 2>&1"
-            [ $? -eq 1 ] && printf '%s\n' "$regex"
+          
+            eval "rxray $q >/dev/null 2>&1" && return 0
+            status=$?
+            [ "$status" -eq 1 ] && printf '%s\n' "$regex"
+            return 0
           }
           export -f run_analysis
-          cat 8g-firewall.conf | parallel -j+0 run_analysis {}
+          parallel -j+0 run_analysis {} :::: 8g-firewall.conf
