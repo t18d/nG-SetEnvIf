@@ -4,10 +4,13 @@ name: ReDoS detector
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "develop" branch
+  # Triggers the workflow on push or pull request events but only for the "staging" branch
   push:
+    branches:
+      - 'develop'
     paths: 
-      - 'staging'
+      - '8g-firewall.conf'
+      - '.github/workflows/redos-detector.yml'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -21,17 +24,36 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
-        with:
-          ref: staging
-      - uses: actions/setup-node@v4
-        with:
-          cache: 'npm'
-          cache-dependency-path: 'LICENSE'
+      # Checks-out your repository under $GITHUB_WORKSPACE on the staging branch
+      - uses: actions/checkout@v7
 
-      # Runs a set of commands using the runners shell
-      - name: Run redos-detector
+      # Install Rust toolchain to use cargo
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      # Cache Cargo binaries to speed up subsequent workflow runs
+      - name: Cache Cargo binaries
+        uses: actions/cache@v6
+        with:
+          path: ~/.cargo/bin
+          key: ${{ runner.os }}-cargo-rxray
+
+      # Installs rxray from crates.io via cargo
+      - name: Install rxray
         run: |
-          cat staging | parallel -j+0 echo {} '&&' \
-          npx redos-detector check "{}" --caseInsensitive --resultsLimit 0
+          if ! command -v rxray &> /dev/null; then
+            cargo install rxray
+          fi
+
+      # Runs your loop logic in parallel across available CPU cores
+      - name: Run rxray ReDoS analysis
+        run: |
+          run_analysis() {
+            line="$1"
+            regex=$(printf '%s\n' "$line" | sed 's/.*~\*//; s/" [0-9][0-9]*;$//')
+            printf -v q '%q' "$regex"
+            eval "rxray $q >/dev/null 2>&1"
+            [ $? -eq 1 ] && printf '%s\n' "$regex"
+          }
+          export -f run_analysis
+          cat 8g-firewall.conf | parallel -j+0 run_analysis {}
