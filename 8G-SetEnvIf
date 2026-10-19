@@ -39,7 +39,7 @@
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#(?:\+|%2b|%20)update(?:\+|%2b|%20)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#\\\x00|(?:\"|%22|\'|%27)?0(?:\"|%22|\'|%27)?(?:=|%3d)(?:\"|%22|\'|%27)?0|cast(?:\(|%28)0x|or%201(?:=|%3d)1#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#globals(?:=|\[|%[0-9A-Fa-f]{2})#i" bot
-	SetEnvIfExpr "%{QUERY_STRING} =~ m#_request(?:=|\[|%[0-9A-Fa-f]{2,})#i" bot
+	SetEnvIfExpr "%{QUERY_STRING} =~ m#_request(?:=|\[|%[0-9A-Fa-f]{2})#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#javascript(?::|%3a).*(?:;|%3b|\)|%29)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#base64_(?:en|de)code.*\)#i" bot
 	SetEnvIfExpr "%{QUERY_STRING} =~ m#@copy|\$_(?:files|get|post)|allow_url_(?:fopen|include)|auto_prepend_file|blexbot|browsersploit|call_user_func_array|(?:php|web)shell|curl(?:_exec|test)|disable_functions?|document_root#i" bot
