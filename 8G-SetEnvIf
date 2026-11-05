@@ -60,7 +60,7 @@
 	SetEnvIfNoCase Request_URI \.php(\()?[0-9]+\)?/?$ bot
 	SetEnvIfNoCase Request_URI (?:header:|set-cookie:.*=) bot
 	SetEnvIfNoCase Request_URI \.s?ftp-?config|s?ftp-?config\. bot
-	SetEnvIfNoCase Request_URI /(?:f?ckfinder|fck/|fckeditor|fullclick) bot
+	SetEnvIfNoCase Request_URI /(?:f?ckfinder|fck/|f?ckeditor|fullclick) bot
 	SetEnvIfNoCase Request_URI /(?:(?:force-)?download|framework/main)\.php bot
 	SetEnvIfNoCase Request_URI \{0\}|\"?0\"?=\"?0|\(/\(|\.\.\.|\+\+\+|\\\\\" bot
 	SetEnvIfNoCase Request_URI /(?:vbull(?:etin)?|boards|vbforum|vbweb|webvb)/? bot
