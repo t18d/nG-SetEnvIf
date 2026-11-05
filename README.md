@@ -72,6 +72,7 @@ If even nG-SetEnvIf fails to satisfy your passion for performance, read on.
 - [Maxim Dounin’s Q&A](https://github.com/t18d/nG-SetEnvIf/wiki/Maxim-Dounin’s-Q&A) (nginx)
 - [Kernel TLS](https://www.f5.com/company/blog/nginx/improving-nginx-performance-with-kernel-tls) (nginx)
   - [kTLS vs HTTP/2](https://mailman.nginx.org/pipermail/nginx-devel/2022-September/NSHDCLL2TY3Q536CO5MAKXSC3HCIMUNF.html)
+- [Top 10 configuration mistakes](https://web.archive.org/web/20240525084757/https://www.f5.com/company/blog/nginx/avoiding-top-10-nginx-configuration-mistakes) (nginx)
 - [Replace mod_rewrite](https://github.com/t18d/nG-SetEnvIf/wiki/Recipes#disable-mod_rewrite-altogether) (Apache)
 - [Calculate `pm.max_children`](https://devcenter.heroku.com/articles/php-concurrency#web_concurrency-defaults-by-dyno-type) (PHP)
 - [OPcache tuning](https://tideways.com/profiler/blog/fine-tune-your-opcache-configuration-to-avoid-caching-suprises) (PHP)
