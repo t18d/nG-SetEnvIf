@@ -75,6 +75,7 @@ If even nG-SetEnvIf fails to satisfy your passion for performance, read on.
 - [Top 10 configuration mistakes](https://web.archive.org/web/20240525084757/https://www.f5.com/company/blog/nginx/avoiding-top-10-nginx-configuration-mistakes) (nginx)
 - [Replace mod_rewrite](https://github.com/t18d/nG-SetEnvIf/wiki/Recipes#disable-mod_rewrite-altogether) (Apache)
 - [Calculate `pm.max_children`](https://devcenter.heroku.com/articles/php-concurrency#web_concurrency-defaults-by-dyno-type) (PHP)
+  - [Decoupled PHP on c5.large](https://dev.to/gabrielanhaia/the-php-fpm-tuning-cheat-sheet-5-settings-that-decide-your-p99-5gp0)
 - [OPcache tuning](https://tideways.com/profiler/blog/fine-tune-your-opcache-configuration-to-avoid-caching-suprises) (PHP)
 - [`max_execution_time`](https://tideways.com/profiler/blog/what-is-the-best-value-for-max-execution-time-in-php) (PHP)
   - [_vs_ `request_terminate_timeout`](https://nwos.com/daily/php-fpm-what-actually-kills-your-long-running-request)
